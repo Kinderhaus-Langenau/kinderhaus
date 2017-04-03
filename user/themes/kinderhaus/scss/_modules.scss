@@ -1,0 +1,18 @@
+.content {
+  background-color: $color-content-bg;
+
+  a {
+    font-family: $font-links;
+    color: #0A6792;
+    text-decoration: none;
+
+    &:hover {
+      color: #002346;
+    }
+  }
+}
+
+.navigation {
+  font-family: $font-bold;
+  font-weight: bold;
+}

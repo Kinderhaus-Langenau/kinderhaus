@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "devDependencies": {
+    "bourbon-neat": "1.8.0",
+    "fs-extra": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0"
+  },
+  "scripts": {
+    "start": "php -S localhost:8000 -t ../../.. ../../../system/router.php & gulp",
+    "build": "gulp build",
+    "clean": "gulp clean"
+  }
+}

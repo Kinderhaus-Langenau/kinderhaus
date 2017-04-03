@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
+<link rel="canonical" href="{{ page.url(true, true) }}" />
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mallanna|Overlock:700" rel="stylesheet"/>
+
+{% block stylesheets %}
+  {% do assets.addCss('theme://css/kinderhaus.css', 98) %}
+  {{ assets.css() }}
+{% endblock stylesheets %}

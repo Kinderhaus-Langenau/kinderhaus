@@ -1,0 +1,16 @@
+*.css
+assets/
+backup/
+bin/
+cache/
+images/
+index.php
+logs/
+node_modules/
+robots.txt
+system/
+tmp/
+user/*
+!user/themes/
+vendor/
+webserver-configs/

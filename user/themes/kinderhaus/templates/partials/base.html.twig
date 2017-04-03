@@ -1,0 +1,42 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+  <head>
+    {% block head %}
+      {% include 'partials/head.html.twig' %}
+      {% include 'partials/metadata.html.twig' %}
+    {% endblock head %}
+  </head>
+
+  <body>
+    {% block body %}
+
+      <header>
+        {% block header %}
+        {% endblock header %}
+      </header>
+
+      <main class="content">
+        {% block main %}
+          {% block content %}
+          {% endblock content %}
+        {% endblock main %}
+      </main>
+
+    {% endblock body %}
+
+    <footer>
+      {% block footer %}
+      {% endblock %}
+    </footer>
+
+    {% block extra_js %}
+      {% if config.system.debugger.enabled %}
+        {% do assets.addJs('//code.jquery.com/jquery-2.1.3.min.js',101) %} 
+        <script src="http://localhost:35729/livereload.js?snipver=1"></script>
+      {% endif %}
+      {{ assets.js() }}
+    {% endblock extra_js %}
+
+  </body>
+</html>

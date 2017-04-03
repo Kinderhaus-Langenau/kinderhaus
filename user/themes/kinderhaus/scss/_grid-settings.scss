@@ -1,0 +1,9 @@
+@import "neat-helpers";
+
+$visual-grid: false;
+$visual-grid-color: red;
+$max-width: 100%;
+
+$phablet: new-breakpoint(480px);
+$tablet: new-breakpoint(768px);
+$desktop: new-breakpoint(1200px);
