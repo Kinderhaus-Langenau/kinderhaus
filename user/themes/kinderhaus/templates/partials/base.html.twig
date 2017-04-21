@@ -1,4 +1,5 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
   <head>
@@ -9,34 +10,46 @@
   </head>
 
   <body>
-    {% block body %}
+    <header class="site-header">
+      {% block header %}
+        {% include 'partials/header.html.twig' %}
+      {% endblock header %}
+    </header>
 
-      <header>
-        {% block header %}
-        {% endblock header %}
-      </header>
-
+    <div class="wrapper-main">
       <main class="content">
-        {% block main %}
-          {% block content %}
-          {% endblock content %}
-        {% endblock main %}
+        {% block content %}
+          {{ page.content }}
+        {% endblock content %}
       </main>
 
-    {% endblock body %}
+      <aside class="sidebar">
+        {% block sidebar %}
+          <section>
+            <b>Kontakt</b>
+            <address>
+              <span>Achstraße 8/1</span>
+              <span>89129 Langenau</span>
+              <span>kinderhaus-langenau@gmx.de</span>
+              <span>Telefon 07345 - 237 806</span>
+            </address>
+          </section>
+        {% endblock sidebar %}
+      </aside>
+    </div>
 
-    <footer>
+    <footer class="site-footer">
       {% block footer %}
-      {% endblock %}
+      {% endblock footer %}
     </footer>
 
     {% block extra_js %}
       {% if config.system.debugger.enabled %}
-        {% do assets.addJs('//code.jquery.com/jquery-2.1.3.min.js',101) %} 
+        {% do assets.addJs('//code.jquery.com/jquery-2.1.3.min.js',101) %}
         <script src="http://localhost:35729/livereload.js?snipver=1"></script>
       {% endif %}
+
       {{ assets.js() }}
     {% endblock extra_js %}
-
   </body>
 </html>
