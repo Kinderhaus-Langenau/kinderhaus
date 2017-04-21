@@ -12,5 +12,6 @@ system/
 tmp/
 user/*
 !user/themes/
+!user/themes/kinderhaus/images
 vendor/
 webserver-configs/

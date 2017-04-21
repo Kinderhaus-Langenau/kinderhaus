@@ -2,11 +2,15 @@ html, body {
   height: 100%;
 }
 
-body {
+html {
   font-family: $font-default;
   font-size: $font-size-default;
-  line-height: rem($line-height-default);
   color: #000;
+}
+
+body {
+  background-color: $color-content-bg;
+  line-height: $line-height-default;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +22,8 @@ h1 {
   font-size: rem($font-size-h1);
 }
 
-strong {
+b, bold, strong {
+  font-family: $font-bold;
+  font-size: 23px;
   font-weight: bold;
 }
