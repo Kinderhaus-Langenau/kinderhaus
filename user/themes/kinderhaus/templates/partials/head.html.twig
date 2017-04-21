@@ -6,7 +6,10 @@
 
 <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
 <link rel="canonical" href="{{ page.url(true, true) }}" />
-<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Mallanna|Overlock:700" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lato|Overlock:700" rel="stylesheet"/>
+
+{% block stylesheets %}
+  {% do assets.addCss('theme://css/kinderhaus.css', 98) %}
 
 {% block stylesheets %}
   {% do assets.addCss('theme://css/kinderhaus.css', 98) %}
