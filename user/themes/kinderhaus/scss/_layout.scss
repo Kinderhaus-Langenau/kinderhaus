@@ -61,7 +61,24 @@ address {
   }
 }
 
-.wrapper-main {
+.navigation {
+  a {
+    margin-right: 1.3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navigation__top {
+  position: absolute;
+  bottom: 0;
+  left: 60.5744%;
+  padding: 0.2rem 1.3rem;
+}
+
+.wrapper {
   @include outer-container();
   margin: 145px auto;
 
