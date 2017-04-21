@@ -1,6 +1,6 @@
 .site-header {
   background-image: linear-gradient(to right, #F3E0AB, #EECFA4);
-  border-bottom: dotted 5px $color-header-red-line;
+  border-bottom: dotted 5px $color-header-dots;
 
   & > .red-line {
     background-color: $color-header-red-line;
