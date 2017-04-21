@@ -1,8 +1,12 @@
 @import "neat-helpers";
 
-$visual-grid: false;
+// $visual-grid: true;
 $visual-grid-color: red;
-$max-width: 100%;
+$visual-grid-opacity: 0.3;
+$grid-columns: 3 !global;
+$max-width: 1100px !global;
+$column: 350px !global;
+$gutter: 25px !global;
 
 $phablet: new-breakpoint(480px);
 $tablet: new-breakpoint(768px);

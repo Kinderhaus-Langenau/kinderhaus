@@ -1,0 +1,11 @@
+.wrapper-main {
+  @include outer-container();
+}
+
+.content {
+  @include span-columns(2);
+}
+
+.sidebar {
+  @include span-columns(1);
+}
