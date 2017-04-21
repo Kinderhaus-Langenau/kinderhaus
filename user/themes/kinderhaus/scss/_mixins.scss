@@ -1,0 +1,16 @@
+@mixin packing-paper() {
+  background-color: $color-packing-paper;
+
+  a {
+    font-family: $font-bold;
+    color: $color-packing-paper-link;
+
+    &:hover {
+      color: $color-packing-paper-link-hover;
+    }
+
+    &:active {
+      color: $color-packing-paper-link-active;
+    }
+  }
+}
