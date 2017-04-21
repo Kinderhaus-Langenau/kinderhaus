@@ -1,20 +1,16 @@
 .site-header {
+  background-image: linear-gradient(to right, #F3E0AB, #EECFA4);
   border-bottom: dotted 5px $color-header-red-line;
-
-  & > .menu-container {
-    background-image: linear-gradient(to right, #F3E0AB, #EECFA4);
-  }
 
   & > .red-line {
     background-color: $color-header-red-line;
   }
 }
 
-.wrapper-main {
+.wrapper {
   a {
     font-family: $font-links;
     color: #0A6792;
-    text-decoration: none;
 
     &:hover {
       color: #002346;
@@ -25,4 +21,4 @@
 .navigation {
   font-family: $font-bold;
   font-weight: bold;
-}
+

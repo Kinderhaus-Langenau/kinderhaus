@@ -18,13 +18,24 @@ address {
   }
 }
 
-.site-header {
-  & > container {
-    position: relative;
-  }
+.container {
+  position: relative;
+}
 
+.site-header {
   & > .menu-container {
     height: 65px;
+  }
+
+  & > .logo {
+    height: 0;
+    margin: 0 auto;
+
+    & > img {
+      position: relative;
+      top: -56px;
+      z-index: 100;
+    }
   }
 
   & > .red-line {
@@ -33,12 +44,30 @@ address {
 
   & > .image-container {
     height: 355px;
+
+    & > img {
+      z-index: 90;
+    }
+
+    & > img:first-child {
+      position: absolute;
+      left: 0;
+    }
+
+    & > img:last-child {
+      position: absolute;
+      right: 0;
+    }
   }
 }
 
 .wrapper-main {
   @include outer-container();
-  margin-top: 145px;
+  margin: 145px auto;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .content {
