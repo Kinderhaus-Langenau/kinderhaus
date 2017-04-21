@@ -28,4 +28,22 @@ address {
 .navigation {
   font-family: $font-bold;
   font-weight: bold;
+}
 
+.site-footer {
+  @include packing-paper;
+  height: 75px;
+  font-size: 20px;
+
+  .wrapper {
+    padding-top: 1rem;
+  }
+
+  a {
+    margin-right: 1.3rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -106,3 +106,7 @@ address {
     }
   }
 }
+
+.wrapper {
+  @include outer-container();
+}
