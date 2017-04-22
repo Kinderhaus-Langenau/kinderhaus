@@ -30,6 +30,10 @@ address {
   font-weight: bold;
 }
 
+.navigation__top {
+  @include packing-paper;
+}
+
 .site-footer {
   @include packing-paper;
   height: 75px;
