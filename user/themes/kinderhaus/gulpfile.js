@@ -20,10 +20,13 @@ gulp.task('scss:dev', function () {
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
+    .pipe(sourcemaps.init())
     .pipe(sass({
       includePaths: ['scss'].concat(neat),
       outputStyle: 'expanded'
     }))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.css))
     .pipe(livereload())
 })

@@ -15,5 +15,6 @@
     "start": "php -S localhost:8000 -t ../../.. ../../../system/router.php & gulp",
     "build": "gulp build",
     "clean": "gulp clean"
-  }
+  },
+  "browserslist": "> 5%"
 }
