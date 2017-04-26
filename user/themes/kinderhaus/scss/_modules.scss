@@ -1,5 +1,5 @@
 address {
-  & a {
+  & > a {
     font-family: $font-default !important;
     color: #000 !important;
   }
@@ -17,10 +17,8 @@ address {
 .wrapper {
   a {
     font-family: $font-links;
-    color: #0A6792;
 
     &:hover {
-      color: #002346;
     }
   }
 }
@@ -30,24 +28,89 @@ address {
   font-weight: bold;
 }
 
-.navigation__top {
+.navigation--top {
+  font-size: $font-size-nav-top;
   @include packing-paper;
+}
+
+.navigation--main {
+  font-size: $font-size-nav-main;
+
+  & > ul {
+    top: -2rem;
+    padding: 0 1.3rem;
+    background-color: #FAB837;
+
+    li {
+      position: relative;
+      height: 50px;
+      line-height: 50px;
+      margin: 0 1.3rem;
+
+
+
+      &.selected {
+        &:after {
+          content: "";
+          background: url("/user/themes/kinderhaus/images/oese.png");
+          height: 23px;
+          width: 23px;
+          position: absolute;
+          left: -30px;
+          top: 15px;
+        }
+
+        a {
+          color: #0A6792;
+        }
+      }
+    }
+
+    a {
+      color: #FFF;
+
+      &:hover {
+        color: #0A6792;
+      }
+
+    }
+
+    &.navigation--main__subnav {
+      top: 0.2rem;
+      background-color: #ACDAF1;
+
+      a {
+        color: #5BAED2;
+
+        &:hover {
+          color: #0C587B;
+        }
+
+        &:active {
+          color: #0C587B;
+        }
+      }
+    }
+  }
+
+  li {
+    color: #FFF;
+    list-style-type: none;
+
+    a {
+      font-family: $font-default;
+    }
+  }
 }
 
 .site-footer {
   @include packing-paper;
-  height: 75px;
-  font-size: 20px;
+}
 
-  .wrapper {
-    padding-top: 1rem;
-  }
+.navigation--bottom {
+  @include packing-paper;
 
-  a {
-    margin-right: 1.3rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  li {
+    list-style-type: none;
   }
 }

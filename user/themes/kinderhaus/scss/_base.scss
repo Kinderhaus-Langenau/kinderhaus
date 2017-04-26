@@ -19,12 +19,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: rem($font-size-h1);
+  font-size: $font-size-h1;
 }
 
 b, bold, strong {
   font-family: $font-bold;
-  font-size: 23px;
   font-weight: bold;
 }
 

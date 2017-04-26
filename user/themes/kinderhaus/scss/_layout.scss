@@ -34,6 +34,7 @@ address {
     & > img {
       position: relative;
       top: -56px;
+      left: -38px;
       z-index: 100;
     }
   }
@@ -46,7 +47,7 @@ address {
     height: 355px;
 
     & > img {
-      z-index: 90;
+      z-index: 80;
     }
 
     & > img:first-child {
@@ -71,7 +72,7 @@ address {
   }
 }
 
-.navigation__top {
+.navigation--top {
   position: absolute;
   bottom: 0;
   left: 60.5744%;
@@ -109,4 +110,65 @@ address {
 
 .wrapper {
   @include outer-container();
+}
+
+.navigation--main {
+  height: 0;
+  margin-top: 0;
+
+  & > ul {
+    position: absolute;
+    top: -25px;
+    z-index: 90;
+
+    &.navigation--main__subnav {
+      display: none;
+      top: 25px;
+
+      &.selected {
+        display: block;
+      }
+    }
+  }
+
+  li {
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  & > li {
+    & > ul {
+      display: none;
+      position: absolute;
+    }
+
+    &.selected {
+      & > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.site-footer {
+  height: 75px;
+  font-size: $font-size-nav-bottom;
+
+  .wrapper {
+    padding-top: 1rem;
+  }
+}
+
+.navigation--bottom {
+  li {
+    display: inline-block;
+
+    a {
+      margin-right: 1.3rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }

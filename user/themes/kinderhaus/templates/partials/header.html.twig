@@ -1,5 +1,5 @@
 <div class="container menu-container">
-  <nav class="navigation navigation__top">
+  <nav class="navigation navigation--top">
     <a href="/">Startseite</a>
     <a href="/jobs">Jobs</a>
     <a href="/sponsoren">Sponsoren</a>
@@ -18,3 +18,7 @@
   <img src="{{ url('theme://images/header_pinselstrich_links.png')}}"/>
   <img src="{{ url('theme://images/header_pinselstrich_rechts.png')}}"/>
 </div>
+
+<nav class="wrapper container navigation navigation--main">
+  {% include 'partials/navigation.html.twig' %}
+</nav>
