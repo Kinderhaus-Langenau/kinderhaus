@@ -50,6 +50,14 @@ address {
       z-index: 80;
     }
 
+    & > .backdrop {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 70;
+      margin: 0 auto;
+    }
+
     & > img:first-child {
       position: absolute;
       left: 0;
