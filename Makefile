@@ -10,10 +10,13 @@ clearcache:
 	${GRAV_BIN} clearcache
 
 build:
-	cd ${THEME_DIR} && npm build
+	cd ${THEME_DIR} && npm run build
 
 clean:
-	cd ${THEME_DIR} && npm clean
+	cd ${THEME_DIR} && npm run clean
+
+sync:
+	rsync -rztplv --delete . f:kinderhaus.childrenofthe.net --exclude={.git,.gitignore,cache/,user/themes/antimatter/,backup/,user/themes/kinderhaus/node_modules/,user/config/,./images/,logs/,Makefile}
 
 install:
 	composer install && cd user/themes/kinderhaus && npm install
