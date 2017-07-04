@@ -59,7 +59,7 @@ address {
         }
 
         a {
-          color: #0A6792;
+          color: $color-blue;
         }
       }
     }
@@ -68,9 +68,15 @@ address {
       color: #FFF;
 
       &:hover {
-        color: #0A6792;
+        color: $color-blue;
       }
 
+    }
+
+    .selected {
+      a {
+        color: $color-blue-dark;
+      }
     }
 
     &.navigation--main__subnav {
@@ -78,14 +84,14 @@ address {
       background-color: #ACDAF1;
 
       a {
-        color: #5BAED2;
+        color: $color-blue-light;
 
         &:hover {
-          color: #0C587B;
+          color: $color-blue-dark;
         }
 
         &:active {
-          color: #0C587B;
+          color: $color-blue-dark;
         }
       }
     }
