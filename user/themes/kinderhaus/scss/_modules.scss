@@ -47,12 +47,10 @@ address {
       line-height: 50px;
       margin: 0 1.3rem;
 
-
-
       &.selected {
         &:after {
           content: "";
-          background: url("/user/themes/kinderhaus/images/oese.png");
+          background: url("../images/oese.png");
           height: 23px;
           width: 23px;
           position: absolute;
