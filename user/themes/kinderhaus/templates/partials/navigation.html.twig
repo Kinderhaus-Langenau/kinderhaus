@@ -1,7 +1,7 @@
 <ul>
   {% for p in pages.children.visible %}
-    {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
-    <li class="{{ current_page }}">
+    {% set selected = (p.active or p.activeChild) ? 'selected' : '' %}
+    <li class="{{ selected }}">
       <a href="{{ p.url }}">{{ p.menu }} </a>
     </li>
   {% endfor %}
