@@ -84,7 +84,8 @@ address {
   position: absolute;
   bottom: 0;
   left: 60.5744%;
-  padding: 0.2rem 1.3rem;
+  padding: 1.3rem;
+  padding-bottom: 0.2rem;
 }
 
 .wrapper {
@@ -125,9 +126,9 @@ address {
   margin-top: 0;
 
   & > ul {
-    padding: 0 1.3rem;
+    padding: 1.3rem;
     position: absolute;
-    top: -2rem;
+    top: -80px;
     z-index: 90;
 
     li {
@@ -148,7 +149,8 @@ address {
 
     &.navigation--main__subnav {
       display: none;
-      top: 0.2rem;
+      top: -2px;
+      z-index: 80;
 
       &.selected {
         display: block;

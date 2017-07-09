@@ -24,8 +24,10 @@ address {
 }
 
 .navigation--top {
-  font-size: $font-size-nav-top;
   @include packing-paper;
+  background-image: url('../images/bg_sidenav.png');
+  background-size: 100% 100%;
+  font-size: $font-size-nav-top;
 }
 
 .navigation--main {
@@ -48,7 +50,8 @@ address {
   }
 
   & > ul:first-child {
-    background-color: #FAB837;
+    background-image: url('../images/bg_main.png');
+    background-size: 100% 100%;
 
     li {
       &:after {
@@ -68,7 +71,8 @@ address {
 }
 
 .navigation--main__subnav {
-  background-color: $color-blue;
+  background-image: url('../images/bg_subnav.png');
+  background-size: 100% 100%;
 
   a {
     color: $color-blue-light;
