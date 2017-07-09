@@ -1,3 +1,7 @@
+.link__fancy {
+  font-family: $font-links;
+}
+
 address {
   & > a {
     font-family: $font-default !important;
@@ -11,15 +15,6 @@ address {
 
   & > .red-line {
     background-color: $color-header-red-line;
-  }
-}
-
-.wrapper {
-  a {
-    font-family: $font-links;
-
-    &:hover {
-    }
   }
 }
 
