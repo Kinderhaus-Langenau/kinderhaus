@@ -7,7 +7,7 @@
   {% endfor %}
 </ul>
 
-{% for p in pages.children.visible %}
+{% for p in pages.children.visible if p.activeChild %}
   {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
   <ul class="navigation--main__subnav {{ current_page }}">
     {% if p.children.count() > 0 %}
