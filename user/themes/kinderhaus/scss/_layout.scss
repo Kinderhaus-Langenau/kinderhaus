@@ -125,13 +125,30 @@ address {
   margin-top: 0;
 
   & > ul {
+    padding: 0 1.3rem;
     position: absolute;
-    top: -25px;
+    top: -2rem;
     z-index: 90;
+
+    li {
+      position: relative;
+      height: 50px;
+      margin: 0 1.3rem;
+
+      &.selected {
+        &:after {
+          height: 23px;
+          width: 23px;
+          position: absolute;
+          left: -30px;
+          top: 15px;
+        }
+      }
+    }
 
     &.navigation--main__subnav {
       display: none;
-      top: 25px;
+      top: 0.2rem;
 
       &.selected {
         display: block;

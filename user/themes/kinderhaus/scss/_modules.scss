@@ -37,25 +37,15 @@ address {
   font-size: $font-size-nav-main;
 
   & > ul {
-    top: -2rem;
-    padding: 0 1.3rem;
     background-color: #FAB837;
 
     li {
-      position: relative;
-      height: 50px;
       line-height: 50px;
-      margin: 0 1.3rem;
 
       &.selected {
         &:after {
           content: "";
           background: url("../images/oese.png");
-          height: 23px;
-          width: 23px;
-          position: absolute;
-          left: -30px;
-          top: 15px;
         }
 
         a {
@@ -80,7 +70,6 @@ address {
     }
 
     &.navigation--main__subnav {
-      top: 0.2rem;
       background-color: #ACDAF1;
 
       a {
