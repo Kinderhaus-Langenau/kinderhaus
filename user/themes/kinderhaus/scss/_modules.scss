@@ -36,62 +36,54 @@ address {
 .navigation--main {
   font-size: $font-size-nav-main;
 
-  & > ul {
-    background-color: #FAB837;
-
-    li {
-      line-height: 50px;
-
-      &.selected {
-        &:after {
-          content: "";
-          background: url("../images/oese.png");
-        }
-
-        a {
-          color: $color-blue-dark;
-        }
-      }
-    }
+  li {
+    color: #FFF;
+    list-style-type: none;
+    line-height: 50px;
 
     a {
-      color: #FFF;
-
-      &:hover {
-        color: $color-blue;
-      }
-
+      font-family: $font-default;
     }
 
-    .selected {
+    &.selected {
       a {
         color: $color-blue-dark;
       }
     }
+  }
 
-    &.navigation--main__subnav {
-      background-color: $color-blue;
+  & > ul:first-child {
+    background-color: #FAB837;
 
-      a {
-        color: $color-blue-light;
-
-        &:hover {
-          color: $color-blue-dark;
-        }
-
-        &:active {
-          color: $color-blue-dark;
-        }
+    li {
+      &:after {
+        content: "";
+        background: url("../images/oese.png");
       }
     }
   }
 
-  li {
+  a {
     color: #FFF;
-    list-style-type: none;
 
-    a {
-      font-family: $font-default;
+    &:hover {
+      color: $color-blue-dark;
+    }
+  }
+}
+
+.navigation--main__subnav {
+  background-color: $color-blue;
+
+  a {
+    color: $color-blue-light;
+
+    &:hover {
+      color: $color-blue-dark;
+    }
+
+    &:active {
+      color: $color-blue-dark;
     }
   }
 }
