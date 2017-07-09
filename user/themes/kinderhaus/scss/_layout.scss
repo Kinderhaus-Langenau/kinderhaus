@@ -164,6 +164,14 @@ address {
 
   .wrapper {
     padding-top: 1rem;
+
+    li {
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 
