@@ -8,11 +8,11 @@
 </ul>
 
 {% for p in pages.children.visible if p.activeChild %}
-  {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
-  <ul class="navigation--main__subnav {{ current_page }}">
+  <ul class="navigation--main__subnav selected">
     {% if p.children.count() > 0 %}
       {% for child in p.children %}
-        <li>
+        {% set selected = child.active ? 'selected' : '' %}
+        <li class="{{ selected }}">
           <a href="{{ child.url }}">{{ child.menu }} </a>
         </li>
       {% endfor %}
