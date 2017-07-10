@@ -3,6 +3,10 @@
 }
 
 address {
+  span, a {
+    line-height: 1.4;
+  }
+
   & > a {
     font-family: $font-default !important;
     color: #000 !important;
@@ -96,5 +100,33 @@ address {
 
   li {
     list-style-type: none;
+  }
+}
+
+.become-member {
+  font-family: $font-links;
+  color: #FFF;
+  line-height: 1.5;
+  border-bottom: dotted 5px $color-header-dots;
+
+  span:first-child {
+    font-size: 50px;
+    line-height: 1;
+  }
+
+  button {
+    font-family: $font-bold;
+    font-size: 1.2rem;
+    background-color: none;
+    background: url('../images/bg_button_gelb.png') no-repeat scroll 0 0 transparent;
+    border: none;
+    height: 60px;
+    width: 191px;
+  }
+}
+
+.contact {
+  b {
+    font-size: 1.15rem;
   }
 }

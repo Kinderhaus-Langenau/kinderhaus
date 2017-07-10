@@ -25,15 +25,8 @@
 
       <aside class="sidebar">
         {% block sidebar %}
-          <section>
-            <b>Kontakt</b>
-            <address>
-              <span>Achstraße 8/1</span>
-              <span>89129 Langenau</span>
-              <a href="mailto:kinderhaus-langenau@gmx.de">kinderhaus-langenau@gmx.de</a>
-              <span>Telefon 07345 - 237 806</span>
-            </address>
-          </section>
+          {% set template = 'partials/sidebar/' ~ page.header.sidebar|default('kontakt') ~ '.html.twig'%}
+          {% include template %}
         {% endblock sidebar %}
       </aside>
     </div>
