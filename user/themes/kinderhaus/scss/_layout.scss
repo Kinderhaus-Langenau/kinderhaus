@@ -32,6 +32,16 @@ address {
       top: -56px;
       left: -38px;
       z-index: 100;
+
+      @include media($to-desktop) {
+        width: 300px;
+        left: 50px;
+      }
+
+      @include media($to-tablet) {
+        width: 200px;
+        left: 20px;
+      }
     }
   }
 
