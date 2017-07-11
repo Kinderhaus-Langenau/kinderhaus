@@ -115,16 +115,21 @@ address {
   }
 }
 
-.site-footer {
-  @include packing-paper;
-}
-
 .navigation--bottom {
   @include packing-paper;
 
   li {
     list-style-type: none;
   }
+}
+
+.navigation-toggle {
+  color: $color-header-red-line;
+  font-size: 35px;
+}
+
+.site-footer {
+  @include packing-paper;
 }
 
 .become-member {
@@ -140,7 +145,7 @@ address {
 
   button {
     font-family: $font-bold;
-    font-size: 1.2rem;
+    font-size: 27px;
     background-color: none;
     background: url('../images/bg_button_gelb.png') no-repeat scroll 0 0 transparent;
     border: none;
@@ -152,11 +157,6 @@ address {
 
 .contact {
   b {
-    font-size: 1.15rem;
+    font-size: 27px;
   }
-}
-
-.navigation-toggle {
-  color: $color-header-red-line;
-  font-size: 1.5rem;
 }

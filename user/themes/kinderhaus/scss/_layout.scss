@@ -3,7 +3,7 @@ html, body {
 }
 
 p {
-  margin: 1.3em 0;
+  margin: 30px 0;
 }
 
 address {
@@ -107,48 +107,9 @@ address {
   }
 }
 
-.navigation {
-  a {
-    margin-right: 1.3rem;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.navigation--top {
-  position: absolute;
-
-  a {
-    margin-right: 10px;
-  }
-
-  @include media($desktop) {
-    left: 60.5744%;
-    padding: 30px;
-    bottom: 0;
-    padding-bottom: 0.2rem;
-  }
-
+.brushstroke {
   @include media($to-desktop) {
-    left: 50%;
-    top: 9px;
-    padding-right: 20px;
-    padding-top: 25px;
-    padding-bottom: 5px;
-    padding: 25px 20px 5px 0;
-  }
-
-  @include media($to-tablet) {
-    left: 0;
-    right: 0;
-    top: 260px;
-    padding: 0;
-  }
-
-  @include media($to-phablet) {
-    top: 190px;
+    display: none;
   }
 }
 
@@ -201,8 +162,77 @@ address {
   }
 }
 
+.become-member {
+  position: relative;
+  padding-bottom: 30px;
+
+  & > div {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+  }
+
+  span {
+    display: block;
+    margin: 23px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  button {
+    cursor: pointer;
+    position: relative;
+    bottom: -10%;
+  }
+}
+
 .navigation {
   padding-left: 30px;
+
+  a {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navigation--top {
+  position: absolute;
+
+  a {
+    margin-right: 10px;
+  }
+
+  @include media($desktop) {
+    left: 60.5744%;
+    padding: 30px;
+    bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  @include media($to-desktop) {
+    left: 50%;
+    top: 9px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding: 25px 20px 5px 0;
+  }
+
+  @include media($to-tablet) {
+    left: 0;
+    right: 0;
+    top: 260px;
+    padding: 0;
+  }
+
+  @include media($to-phablet) {
+    top: 190px;
+  }
 }
 
 .navigation--main {
@@ -229,13 +259,13 @@ address {
 
   & > .navigation {
     @include media($desktop) {
-      padding: 1rem;
+      padding: 23px;
       position: absolute;
 
       li {
         position: relative;
         height: 50px;
-        margin: 0 1.3rem;
+        margin: 0 30px;
         vertical-align: top;
         display: inline-block;
 
@@ -268,66 +298,17 @@ address {
   }
 }
 
-.site-footer {
-  height: 75px;
-  font-size: $font-size-nav-bottom;
-
-  .wrapper {
-    padding-top: 1rem;
-
-    li {
-      margin-right: 50px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
 .navigation--bottom {
   li {
     display: inline-block;
 
     a {
-      margin-right: 1.3rem;
+      margin-right: 30px;
 
       &:last-child {
         margin-right: 0;
       }
     }
-  }
-}
-
-.become-member {
-  position: relative;
-  padding-bottom: 30px;
-
-  & > div {
-    position: absolute;
-    top: 15%;
-    left: 7%;
-  }
-
-  span {
-    display: block;
-    margin: 1rem 0;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  button {
-    cursor: pointer;
-    position: relative;
-    bottom: -10%;
-  }
-}
-
-.brushstroke {
-  @include media($to-desktop) {
-    display: none;
   }
 }
 
@@ -345,4 +326,21 @@ address {
 #navigation-main:target {
   display: block;
   z-index: 130;
+}
+
+.site-footer {
+  height: 75px;
+  font-size: $font-size-nav-bottom;
+
+  .wrapper {
+    padding-top: 23px;
+
+    li {
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
