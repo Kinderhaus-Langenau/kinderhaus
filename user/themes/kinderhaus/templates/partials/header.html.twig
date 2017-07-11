@@ -13,11 +13,13 @@
 <div class="red-line"></div>
 
 <div class="container image-container">
-  <img src="{{ url('theme://images/header_pinselstrich_links.png') }}"/>
+  <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_links.png') }}"/>
   <img class="backdrop" src="{{ url('image://header.jpg') }}"/>
-  <img src="{{ url('theme://images/header_pinselstrich_rechts.png') }}"/>
+  <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_rechts.png') }}"/>
 </div>
 
-<nav class="wrapper container navigation navigation--main">
+<a href="#navigation-main"><i class="navigation-toggle navigation--main__open fa fa-bars"></i></a>
+<nav id="navigation-main" class="wrapper container navigation--main">
+  <a href="#"><i class="navigation-toggle navigation--main__close fa fa-bars"></i></a>
   {% include 'partials/navigation.html.twig' %}
 </nav>

@@ -1,4 +1,4 @@
-<ul>
+<ul class="navigation navigation--main__top">
   {% for p in pages.children.visible %}
     {% set selected = (p.active or p.activeChild) ? 'selected' : '' %}
     <li class="{{ selected }}">
@@ -8,7 +8,7 @@
 </ul>
 
 {% for p in pages.children.visible if p.activeChild %}
-  <ul class="navigation navigation--main__subnav selected">
+  <ul class="navigation navigation--main__sub selected">
     {% if p.children.count() > 0 %}
       {% for child in p.children %}
         {% set selected = child.active ? 'selected' : '' %}

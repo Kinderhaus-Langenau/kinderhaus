@@ -19,6 +19,16 @@ address {
 }
 
 .site-header {
+  z-index: 100;
+  position: relative;
+
+  @include media($to-desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   & > .menu-container {
     height: 65px;
   }
@@ -39,8 +49,12 @@ address {
       }
 
       @include media($to-tablet) {
-        width: 200px;
+        width: 250px;
         left: 20px;
+      }
+
+      @include media($to-phablet) {
+        width: 200px;
       }
     }
   }
@@ -50,7 +64,7 @@ address {
   }
 
   & > .image-container {
-    height: 355px;
+    height: 20px;
 
     & > img {
       z-index: 80;
@@ -62,6 +76,19 @@ address {
       right: 0;
       z-index: 70;
       margin: 0 auto;
+
+      @include media($to-desktop) {
+        width: 100%;
+      }
+
+      @include media($to-tablet) {
+        width: 767px;
+        overflow: hidden;
+      }
+
+      @include media($to-phablet) {
+        width: 479px;
+      }
     }
 
     & > img:first-child {
@@ -72,6 +99,10 @@ address {
     & > img:last-child {
       position: absolute;
       right: 0;
+    }
+
+    @include media($desktop) {
+      height: 355px;
     }
   }
 }
@@ -88,15 +119,54 @@ address {
 
 .navigation--top {
   position: absolute;
-  bottom: 0;
-  left: 60.5744%;
-  padding: 1.3rem;
-  padding-bottom: 0.2rem;
+
+  a {
+    margin-right: 10px;
+  }
+
+  @include media($desktop) {
+    left: 60.5744%;
+    padding: 30px;
+    bottom: 0;
+    padding-bottom: 0.2rem;
+  }
+
+  @include media($to-desktop) {
+    left: 50%;
+    top: 9px;
+    padding-right: 20px;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    padding: 25px 20px 5px 0;
+  }
+
+  @include media($to-tablet) {
+    left: 0;
+    right: 0;
+    top: 260px;
+    padding: 0;
+  }
+
+  @include media($to-phablet) {
+    top: 190px;
+  }
 }
 
 .wrapper {
   @include outer-container();
-  margin: 145px auto;
+  margin-top: 250px;
+
+  @include media($phablet) {
+    margin-top: 350px;
+  }
+
+  @include media($desktop) {
+    margin: 145px auto;
+  }
+
+  @include media($to-desktop) {
+    @include outer-container(90%);
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -105,10 +175,18 @@ address {
 
 .content {
   @include span-columns(8);
+
+  @include media($to-tablet) {
+    @include span-columns(1 of 1);
+  }
 }
 
 .sidebar {
   @include span-columns(4);
+
+  @include media($to-tablet) {
+    display: none;
+  }
 
   section {
     margin: 30px 0;
@@ -123,63 +201,70 @@ address {
   }
 }
 
-.wrapper {
-  @include outer-container();
+.navigation {
+  padding-left: 30px;
 }
 
 .navigation--main {
-  height: 0;
-  margin-top: 0;
-
-  & > ul {
-    padding: 1rem;
+  @include media($to-desktop) {
     position: absolute;
-    top: -75px;
-    z-index: 90;
+    z-index: 110;
+    top: -350px;
+    left: 0;
+    right: -8%;
+    width: 100%;
+    display: none;
 
-    li {
-      position: relative;
-      height: 50px;
-      margin: 0 1.3rem;
+  }
 
-      &.selected {
-        &:after {
-          height: 23px;
-          width: 23px;
-          position: absolute;
-          left: -30px;
-          top: 15px;
+  @include media($to-phablet) {
+    top: -250px;
+    right: -5%;
+  }
+
+  @include media($desktop) {
+    height: 0;
+    margin-top: 0;
+  }
+
+  & > .navigation {
+    @include media($desktop) {
+      padding: 1rem;
+      position: absolute;
+
+      li {
+        position: relative;
+        height: 50px;
+        margin: 0 1.3rem;
+        vertical-align: top;
+        display: inline-block;
+
+        &.selected {
+          &:after {
+            height: 23px;
+            width: 23px;
+            position: absolute;
+            left: -30px;
+            top: 15px;
+          }
         }
       }
     }
-
-    &.navigation--main__subnav {
-      display: none;
-      top: -5px;
-      z-index: 80;
-
-      &.selected {
-        display: block;
-      }
-    }
   }
+}
 
-  li {
-    vertical-align: top;
-    display: inline-block;
-  }
+.navigation--main__top {
+  top: -75px;
+  z-index: 120;
+}
 
-  & > li {
-    & > ul {
-      display: none;
-      position: absolute;
-    }
+.navigation--main__sub {
+  top: -5px;
+  width: 100%;
+  z-index: 115;
 
-    &.selected {
-      & > ul {
-        display: block;
-      }
-    }
+  &.selected {
+    display: block;
   }
 }
 
@@ -238,4 +323,26 @@ address {
     position: relative;
     bottom: -10%;
   }
+}
+
+.brushstroke {
+  @include media($to-desktop) {
+    display: none;
+  }
+}
+
+.navigation-toggle {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 120;
+
+  @include media($desktop) {
+    display: none;
+  }
+}
+
+#navigation-main:target {
+  display: block;
+  z-index: 130;
 }
