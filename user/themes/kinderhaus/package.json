@@ -12,7 +12,7 @@
     "gulp-sourcemaps": "^2.4.0"
   },
   "scripts": {
-    "start": "php -S localhost:8000 -t ../../.. ../../../system/router.php & gulp",
+    "start": "php -S 0.0.0.0:8000 -t ../../.. ../../../system/router.php & gulp",
     "build": "gulp build",
     "clean": "gulp clean"
   },
