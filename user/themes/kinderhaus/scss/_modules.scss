@@ -14,11 +14,18 @@ address {
 }
 
 .site-header {
+  position: relative;
   background-image: linear-gradient(to right, #F3E0AB, #EECFA4);
-  border-bottom: dotted 5px $color-header-dots;
 
   & > .red-line {
     background-color: $color-header-red-line;
+  }
+
+  &:after {
+    @include media($desktop) {
+      content: "";
+      border-bottom: dotted 5px $color-header-dots;
+    }
   }
 }
 

@@ -108,6 +108,17 @@ address {
       height: 355px;
     }
   }
+
+  &:after {
+    // gepunktete Linie
+    @include media($desktop) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+    }
+  }
 }
 
 .brushstroke {
@@ -332,7 +343,7 @@ address {
 }
 
 .site-footer {
-  height: 75px;
+  height: 100px;
   font-size: $font-size-nav-bottom;
 
   .wrapper {
