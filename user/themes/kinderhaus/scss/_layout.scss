@@ -46,15 +46,18 @@ address {
       @include media($to-desktop) {
         width: 300px;
         left: 50px;
+        top: -40px;
       }
 
       @include media($to-tablet) {
         width: 250px;
         left: 20px;
+        top: -33px;
       }
 
       @include media($to-phablet) {
         width: 200px;
+        top: -25px;
       }
     }
   }
