@@ -92,7 +92,7 @@ address {
   }
 
   .selected {
-    &:after {
+    &::after {
       content: "";
       background: url("../images/oese.png");
     }

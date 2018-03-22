@@ -154,6 +154,24 @@ address {
   @include media($to-tablet) {
     @include span-columns(1 of 1);
   }
+
+  ul {
+    padding-left: 23px;
+  }
+
+  li {
+    list-style: none;
+
+    &::before {
+      content: "";
+      margin-left: -28px;
+      margin-right: 5px;
+      display: inline-block;
+      background: url("../images/oese.png") no-repeat bottom/14px;
+      width: 23px;
+      height: 23px;
+    }
+  }
 }
 
 .sidebar {
