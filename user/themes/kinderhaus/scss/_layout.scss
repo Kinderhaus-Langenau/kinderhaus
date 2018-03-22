@@ -3,11 +3,11 @@ html, body {
 }
 
 p {
-  margin: 30px 0;
+  margin: 1.3rem 0;
 }
 
 address {
-  margin: 10px 0;
+  margin: $spacing-small 0;
 
   & > span {
     display: block;
@@ -164,7 +164,7 @@ address {
   }
 
   section {
-    margin: 30px 0;
+    margin: $spacing-large 0;
 
     &:first-child {
       margin-top: 0;
@@ -178,7 +178,7 @@ address {
 
 .become-member {
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: $spacing-large;
 
   & > div {
     position: absolute;
@@ -203,10 +203,10 @@ address {
 }
 
 .navigation {
-  padding-left: 30px;
+  padding-left: $spacing-large;
 
   a {
-    margin-right: 30px;
+    margin-right: $spacing-large;
 
     &:last-child {
       margin-right: 0;
@@ -218,23 +218,23 @@ address {
   position: absolute;
 
   a {
-    margin-right: 10px;
+    margin-right: $spacing-small;
   }
 
   @include media($desktop) {
     left: 60.5744%;
-    padding: 30px;
+    padding: $spacing-large;
     bottom: 0;
-    padding-bottom: 5px;
+    padding-bottom: $spacing-extra-small;
   }
 
   @include media($to-desktop) {
     left: 50%;
     top: 9px;
-    padding-right: 20px;
+    padding-right: $spacing-medium;
     padding-top: 25px;
-    padding-bottom: 5px;
-    padding: 25px 20px 5px 0;
+    padding-bottom: $spacing-extra-small;
+    padding: $spacing-medium-large $spacing-medium $spacing-extra-small 0;
   }
 
   @include media($to-tablet) {
@@ -273,13 +273,13 @@ address {
 
   & > .navigation {
     @include media($desktop) {
-      padding: 23px;
+      padding: $spacing-medium-large;
       position: absolute;
 
       li {
         position: relative;
         height: 50px;
-        margin: 0 30px;
+        margin: 0 $spacing-large;
         vertical-align: top;
         display: inline-block;
 
@@ -317,7 +317,7 @@ address {
     display: inline-block;
 
     a {
-      margin-right: 30px;
+      margin-right: $spacing-large;
 
       &:last-child {
         margin-right: 0;
@@ -347,7 +347,7 @@ address {
   font-size: $font-size-nav-bottom;
 
   .wrapper {
-    padding-top: 23px;
+    padding-top: $spacing-medium-large;
 
     li {
       margin-right: 50px;
