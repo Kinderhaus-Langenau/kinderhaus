@@ -62,7 +62,7 @@ html, body {
     }
 
     & > .backdrop {
-      position: absolute;
+      position: relative;
       left: 0;
       right: 0;
       z-index: 70;
@@ -79,6 +79,34 @@ html, body {
 
       @include media($to-phablet) {
         width: 479px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../images/header_pinselstrich_links.png") no-repeat;
+      left: 0;
+      width: 355px;
+      height: 100%;
+      z-index: 90;
+
+      @include breakpoint($desktop-medium) {
+        left: 175px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../images/header_pinselstrich_rechts.png") no-repeat;
+      right: 0;
+      width: 355px;
+      height: 100%;
+      z-index: 90;
+
+      @include breakpoint($desktop-medium) {
+        right: 175px;
       }
     }
 

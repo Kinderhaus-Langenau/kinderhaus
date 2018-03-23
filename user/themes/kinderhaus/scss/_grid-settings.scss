@@ -10,7 +10,9 @@ $gutter: 50px !global;
 $phablet: new-breakpoint(480px);
 $tablet: new-breakpoint(768px);
 $desktop: new-breakpoint(1005px);
+$desktop-medium: new-breakpoint(1820px);
 
 $to-phablet: new-breakpoint(max-width 479px);
 $to-tablet: new-breakpoint(max-width 767px);
 $to-desktop: new-breakpoint(max-width 1004px);
+$to-desktop-medium: new-breakpoint(max-width 1820px);
