@@ -2,17 +2,6 @@
   font-family: $font-links;
 }
 
-address {
-  span, a {
-    line-height: 1.4;
-  }
-
-  & > a {
-    font-family: $font-default !important;
-    color: #000 !important;
-  }
-}
-
 .site-header {
   position: relative;
   background-image: linear-gradient(to right, #F3E0AB, #EECFA4);

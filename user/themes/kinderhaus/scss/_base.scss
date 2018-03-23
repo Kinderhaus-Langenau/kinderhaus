@@ -31,3 +31,24 @@ b, bold, strong {
 a {
   text-decoration: none;
 }
+
+p {
+  margin: $spacing-medium 0;
+}
+
+address {
+  margin: $spacing-small 0;
+
+  & > span {
+    display: block;
+
+    & > a {
+      line-height: 1.4;
+    }
+  }
+
+  & > a {
+    font-family: $font-default !important;
+    color: #000 !important;
+  }
+}

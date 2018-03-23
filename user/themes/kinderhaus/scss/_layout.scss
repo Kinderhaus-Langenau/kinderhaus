@@ -2,18 +2,6 @@ html, body {
   height: 100%;
 }
 
-p {
-  margin: 1.3rem 0;
-}
-
-address {
-  margin: $spacing-small 0;
-
-  & > span {
-    display: block;
-  }
-}
-
 .container {
   position: relative;
 }
