@@ -143,6 +143,10 @@ html, body {
     @include span-columns(1 of 1);
   }
 
+  & > h1 {
+    margin-top: $spacing-medium;
+  }
+
   ul {
     padding-left: 23px;
   }
