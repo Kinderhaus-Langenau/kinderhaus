@@ -1,25 +1,27 @@
-<div class="container menu-container">
-  <nav class="navigation navigation--top">
-    <a href="/jobs">Jobs</a>
-    <a href="/sponsoren">Sponsoren</a>
-    <a href="/impressum">Impressum</a>
+<header class="site-header">
+  <div class="container menu-container">
+    <nav class="navigation navigation--top">
+      <a href="/jobs">Jobs</a>
+      <a href="/sponsoren">Sponsoren</a>
+      <a href="/impressum">Impressum</a>
+    </nav>
+  </div>
+
+  <div class="wrapper logo">
+    <img alt="Vereinslogo" src="{{ url('theme://images/logo.png')}}"/>
+  </div>
+
+  <div class="red-line"></div>
+
+  <div class="container image-container">
+    <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_links.png') }}"/>
+    <img class="backdrop" src="{{ url('image://header.jpg') }}"/>
+    <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_rechts.png') }}"/>
+  </div>
+
+  <a href="#navigation-main"><i class="navigation-toggle navigation--main__open fa fa-bars"></i></a>
+  <nav id="navigation-main" class="wrapper container navigation--main">
+    <a href="#"><i class="navigation-toggle navigation--main__close fa fa-bars"></i></a>
+    {% include 'partials/navigation.html.twig' %}
   </nav>
-</div>
-
-<div class="wrapper logo">
-  <img alt="Vereinslogo" src="{{ url('theme://images/logo.png')}}"/>
-</div>
-
-<div class="red-line"></div>
-
-<div class="container image-container">
-  <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_links.png') }}"/>
-  <img class="backdrop" src="{{ url('image://header.jpg') }}"/>
-  <img class="brushstroke" src="{{ url('theme://images/header_pinselstrich_rechts.png') }}"/>
-</div>
-
-<a href="#navigation-main"><i class="navigation-toggle navigation--main__open fa fa-bars"></i></a>
-<nav id="navigation-main" class="wrapper container navigation--main">
-  <a href="#"><i class="navigation-toggle navigation--main__close fa fa-bars"></i></a>
-  {% include 'partials/navigation.html.twig' %}
-</nav>
+</header>
