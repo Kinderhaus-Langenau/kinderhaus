@@ -19,6 +19,9 @@
   }
 
   li {
+    & + li {
+      margin-top: $spacing-small;
+    }
 
     &::before {
       content: "";
