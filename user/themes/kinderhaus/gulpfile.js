@@ -55,6 +55,7 @@ gulp.task('clean', function() {
   fs.removeSync('./css')
 })
 
+gulp.task('build:dev', ['clean', 'scss:dev'])
 gulp.task('build', ['clean', 'scss:prod'])
 
 gulp.task('default',function(){

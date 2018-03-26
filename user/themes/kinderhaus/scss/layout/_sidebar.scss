@@ -1,0 +1,52 @@
+.sidebar {
+  @include span-columns(4);
+
+  @include media($to-tablet) {
+    display: none;
+  }
+
+  section {
+    margin: $spacing-large 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sidebar__become-member {
+  position: relative;
+  padding-bottom: $spacing-large;
+
+  & > div {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+  }
+
+  span {
+    display: block;
+    margin: 23px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  button {
+    position: relative;
+    bottom: -10%;
+    height: 60px;
+    width: 191px;
+  }
+}
+
+.sidebar__contact {
+  & > h2 {
+    margin: 0;
+  }
+}

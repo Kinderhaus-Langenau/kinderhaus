@@ -1,19 +1,19 @@
-<ul class="navigation navigation--main__top">
+<ul class="page-navigation__list page-navigation__main-list">
   {% for p in pages.children.visible %}
-    {% set selected = (p.active or p.activeChild) ? 'selected' : '' %}
-    <li class="{{ selected }}">
-      <a href="{{ p.url }}">{{ p.menu }} </a>
+    {% set selected = (p.active or p.activeChild) ? 'page-navigation__list-item--selected' : '' %}
+    <li class="page-navigation__list-item {{ selected }}">
+      <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
     </li>
   {% endfor %}
 </ul>
 
 {% for p in pages.children.visible if p.activeChild %}
-  <ul class="navigation navigation--main__sub selected">
+  <ul class="page-navigation__list page-navigation__sub-list selected">
     {% if p.children.count() > 0 %}
       {% for child in p.children %}
-        {% set selected = child.active ? 'selected' : '' %}
-        <li class="{{ selected }}">
-          <a href="{{ child.url }}">{{ child.menu }} </a>
+        {% set selected = child.active ? 'page-navigation__list-item--selected' : '' %}
+        <li class="page-navigation__list-item {{ selected }}">
+          <a href="{{ child.url }}" class="page-navigation__link">{{ child.menu }} </a>
         </li>
       {% endfor %}
     {% endif %}

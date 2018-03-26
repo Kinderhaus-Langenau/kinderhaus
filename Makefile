@@ -12,6 +12,9 @@ clearcache:
 build:
 	cd ${THEME_DIR} && npm run build
 
+build-dev:
+	cd ${THEME_DIR} && npm run build-dev
+
 clean:
 	cd ${THEME_DIR} && npm run clean
 

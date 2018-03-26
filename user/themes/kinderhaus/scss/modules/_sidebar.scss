@@ -1,0 +1,27 @@
+.sidebar__become-member {
+  font-family: $font-links;
+  color: #FFF;
+  line-height: 1.5;
+  border-bottom: dotted 5px $color-header-dots;
+
+  span:first-child {
+    font-size: 50px;
+    line-height: 1;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: $font-bold;
+    font-size: 27px;
+    background-color: none;
+    background: url('../images/bg_button_gelb.png') no-repeat scroll 0 0 transparent;
+    border: none;
+    color: #FFF;
+  }
+}
+
+.sidebar__contact {
+  h2 {
+    font-size: 27px;
+  }
+}

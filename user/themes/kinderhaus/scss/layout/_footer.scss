@@ -1,0 +1,23 @@
+.footer {
+  height: 100px;
+  font-size: $font-size-nav-bottom;
+}
+
+.footer__wrapper {
+  @include outer-container($content-max-width);
+  padding-top: $spacing-medium-large;
+}
+
+.footer-navigation {
+  li {
+    display: inline-block;
+
+    a {
+      margin-right: $spacing-large;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

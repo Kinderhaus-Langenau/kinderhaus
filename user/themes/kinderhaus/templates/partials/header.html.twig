@@ -1,26 +1,38 @@
-<header class="site-header">
-  <div class="container menu-container">
-    <nav class="navigation navigation--top">
-      <a href="/">Startseite</a>
-      <a href="/jobs">Jobs</a>
-      <a href="/sponsoren">Sponsoren</a>
-      <a href="/impressum">Impressum</a>
-    </nav>
-  </div>
+<header class="header">
+  <nav class="navigation site-navigation">
+    <ul class="site-navigation__list">
+      <li class="site-navigation__list-element">
+        <a href="/">Startseite</a>
+      </li>
+      <li class="site-navigation__list-element">
+        <a href="/jobs">Jobs</a>
+      </li>
+      <li class="site-navigation__list-element">
+        <a href="/sponsoren">Sponsoren</a>
+      </li>
+      <li class="site-navigation__list-element">
+        <a href="/impressum">Impressum</a>
+      </li>
+    </ul>
+  </nav>
 
-  <div class="wrapper logo">
-    <img alt="Vereinslogo" src="{{ url('theme://images/logo.png')}}"/>
+  <div class="logo__wrapper">
+    <img class="logo__image" alt="Vereinslogo" src="{{ url('theme://images/logo.png')}}"/>
   </div>
 
   <div class="red-line"></div>
 
-  <div class="container image-container">
-    <img class="backdrop" src="{{ url('image://header.jpg') }}"/>
+  <div class="backdrop">
+    <div class="backdrop__wrapper">
+      <img class="backdrop__brushstroke backdrop__brushstroke-left" src="{{ url('theme://images/header_pinselstrich_links.png') }}"/>
+      <img class="backdrop__image" src="{{ url('image://header.jpg') }}" width="1470" height="355" />
+      <img class="backdrop__brushstroke backdrop__brushstroke-right" src="{{ url('theme://images/header_pinselstrich_rechts.png') }}"/>
+    </div>
   </div>
 
-  <a href="#navigation-main"><i class="navigation-toggle navigation--main__open fa fa-bars"></i></a>
-  <nav id="navigation-main" class="wrapper container navigation--main">
-    <a href="#"><i class="navigation-toggle navigation--main__close fa fa-bars"></i></a>
+  <nav class="navigation page-navigation">
     {% include 'partials/navigation.html.twig' %}
   </nav>
+
+  <div class="dotted-border"></div>
 </header>
