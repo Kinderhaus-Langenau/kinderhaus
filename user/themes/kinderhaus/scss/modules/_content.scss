@@ -3,3 +3,40 @@
     list-style-type: none;
   }
 }
+
+.polaroid {
+  background-color: #FAF0EF;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+  .modular-bildgruppe > & {
+    &:nth-child(1) {
+      transform: rotate(8deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(-5deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(2deg);
+    }
+
+    &:nth-child(4) {
+      transform: rotate(-1.5deg);
+    }
+
+    &:nth-child(5) {
+      transform: rotate(5deg);
+    }
+
+    &:nth-child(6) {
+      transform: rotate(-8deg);
+    }
+  }
+}
+
+.polaroid__caption {
+  font-family: "Gloria Hallelujah";
+}

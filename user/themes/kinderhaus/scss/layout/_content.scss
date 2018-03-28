@@ -5,6 +5,7 @@
 
 .content {
   @include span-columns(8);
+  clear: both;
 
   @include media($to-tablet) {
     @include span-columns(1 of 1);
@@ -33,4 +34,43 @@
       height: 23px;
     }
   }
+}
+
+.modular-row {
+  & + & {
+    margin-top: $spacing-extra-large;
+  }
+}
+
+.modular-bildgruppe {
+  @include outer-container($content-max-width);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.polaroid {
+  padding: $spacing-medium;
+  max-width: 33%;
+}
+
+.polaroid__image {
+  width: 100%;
+  height: auto;
+}
+
+.align__center {
+  margin: $spacing-medium auto;
+}
+
+.align__left {
+  float: left;
+  margin-right: $spacing-medium;
+  margin-bottom: $spacing-medium;
+}
+
+.align__right {
+  float: right;
+  margin-left: $spacing-medium;
+  margin-bottom: $spacing-medium;
 }
