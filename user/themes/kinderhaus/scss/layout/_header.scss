@@ -42,6 +42,7 @@
 .backdrop__image {
   max-width: 100%;
   object-fit: cover;
+  margin-bottom: -6px; // Kleiner Hack, sonst gibt es unten einen kleinen Absatz...
 }
 
 .backdrop__brushstroke {

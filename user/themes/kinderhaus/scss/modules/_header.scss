@@ -24,7 +24,7 @@
 }
 
 .backdrop {
-  background-color: #CCB495;
+  background-color: $color-backdrop;
 }
 
 .page-navigation__list {
@@ -33,7 +33,7 @@
   background-size: 100% 100%;
 
   @include media($to-desktop) {
-    background-color: #FAB837;
+    background-color: $color-page-navigation-main;
   }
 }
 
@@ -42,7 +42,7 @@
 }
 
 .page-navigation__list-item {
-  color: #FFF;
+  color: $color-white;
   list-style-type: none;
   line-height: 50px;
 }
@@ -55,7 +55,7 @@
 
 .page-navigation__link {
   font-family: $font-default;
-  color: #FFF;
+  color: $color-white;
 
   &:hover {
     color: $color-blue-dark;
