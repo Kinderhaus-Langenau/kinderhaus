@@ -42,3 +42,10 @@
     margin: 0;
   }
 }
+
+.sidebar__oeffnungszeiten {
+  & > h2 {
+    margin-top: $spacing-medium;
+    margin-bottom: 0;
+  }
+}
