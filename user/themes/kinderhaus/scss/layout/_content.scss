@@ -1,6 +1,10 @@
 .content__wrapper {
   @include outer-container($content-max-width);
-  margin: 145px auto;
+  margin: 85px auto;
+
+  &.margin-top__large {
+    margin-top: 145px;
+  }
 }
 
 .content {
