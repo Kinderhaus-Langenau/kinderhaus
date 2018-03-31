@@ -7,12 +7,19 @@ $max-width: 1100px !global;
 $column: 87.5px !global;
 $gutter: 50px !global;
 
-$phablet: new-breakpoint(480px);
-$tablet: new-breakpoint(768px);
-$desktop: new-breakpoint(1005px);
-$desktop-medium: new-breakpoint(1820px);
+$size-phablet-sm: 480px;
+$size-phablet-lg: 650px;
+$size-tablet-sm: 768px;
+$size-tablet-md: 880px;
+$size-tablet-lg: 1024px;
+$size-desktop-sm: 1366px;
 
-$to-phablet: new-breakpoint(max-width 479px);
-$to-tablet: new-breakpoint(max-width 767px);
-$to-desktop: new-breakpoint(max-width 1004px);
-$to-desktop-medium: new-breakpoint(max-width 1820px);
+$phablet-sm: new-breakpoint($size-phablet-sm);
+$phablet-lg: new-breakpoint($size-phablet-lg);
+$tablet-sm: new-breakpoint($size-tablet-sm);
+$tablet-md: new-breakpoint($size-tablet-md);
+$tablet-lg: new-breakpoint($size-tablet-lg);
+$desktop-sm: new-breakpoint($size-desktop-sm);
+
+$to-tablet-sm: new-breakpoint(max-width $size-tablet-sm - 1);
+$to-desktop-sm: new-breakpoint(max-width $size-desktop-sm - 1);

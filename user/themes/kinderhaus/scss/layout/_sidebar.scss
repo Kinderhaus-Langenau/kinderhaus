@@ -1,7 +1,7 @@
 .sidebar {
   @include span-columns(4);
 
-  @include media($to-tablet) {
+  @include media($to-tablet-sm) {
     display: none;
   }
 

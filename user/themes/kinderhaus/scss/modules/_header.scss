@@ -16,7 +16,7 @@
   font-size: $font-size-nav-top;
   text-align: center;
 
-  @include media($tablet) {
+  @include media($tablet-sm) {
     text-align: right;
     background-image: url('../images/bg_sidenav.png');
     background-size: 100% 100%;
@@ -29,11 +29,14 @@
 
 .page-navigation__list {
   font-size: $font-size-nav-main;
-  background-image: url('../images/bg_main.png');
-  background-size: 100% 100%;
 
-  @include media($to-desktop) {
+  @include media($to-tablet-sm) {
     background-color: $color-page-navigation-main;
+  }
+
+  @include media($tablet-sm) {
+    background-image: url('../images/bg_main.png');
+    background-size: 100% 100%;
   }
 }
 

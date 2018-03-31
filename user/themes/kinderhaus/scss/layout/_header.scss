@@ -47,6 +47,7 @@
 
 .backdrop__brushstroke {
   position: absolute;
+  top: 0;
 }
 
 .backdrop__brushstroke-left {
@@ -69,6 +70,10 @@
   display: inline-block;
   padding: $spacing-medium-large;
   z-index: 9999;
+
+  @include media($to-desktop-sm) {
+    width: 100%;
+  }
 }
 
 .page-navigation__sub-list {

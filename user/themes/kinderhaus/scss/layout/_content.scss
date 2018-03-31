@@ -1,18 +1,22 @@
 .content__wrapper {
-  @include outer-container($content-max-width);
+  @include outer-container(90%);
   margin: 85px auto;
 
   &.margin-top__large {
     margin-top: 145px;
   }
+
+  @include media($desktop-sm) {
+    @include outer-container($content-max-width);
+  }
 }
 
 .content {
-  @include span-columns(8);
+  @include span-columns(1 of 1);
   clear: both;
 
-  @include media($to-tablet) {
-    @include span-columns(1 of 1);
+  @include media($tablet-sm) {
+    @include span-columns(8);
   }
 
   & > h1 {
@@ -55,7 +59,15 @@
 
 .polaroid {
   padding: $spacing-medium;
-  max-width: 33%;
+  width: 100%;
+
+  @include media($phablet-sm) {
+    max-width: 50%;
+  }
+
+  @include media($desktop-sm) {
+    max-width: 33%;
+  }
 }
 
 .polaroid__image {
