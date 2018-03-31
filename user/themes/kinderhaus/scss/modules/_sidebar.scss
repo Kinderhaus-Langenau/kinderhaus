@@ -1,8 +1,12 @@
-.sidebar__become-member {
+.sidebar {
+  & > * + * {
+    border-top: dotted 5px $color-header-dots;
+  }
+}
+.sidebar__post-it {
   font-family: $font-links;
   color: #FFF;
   line-height: 1.5;
-  border-bottom: dotted 5px $color-header-dots;
 
   span:first-child {
     font-size: 50px;
@@ -11,7 +15,7 @@
 
   button {
     cursor: pointer;
-    font-family: $font-bold;
+    font-family: $font-post-it-button;
     font-size: 27px;
     background-color: none;
     background: url('../images/bg_button_gelb.png') no-repeat scroll 0 0 transparent;
