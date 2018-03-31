@@ -23,3 +23,6 @@ sync:
 
 install:
 	composer install && cd user/themes/kinderhaus && npm install
+
+watch:
+	cd ${THEME_DIR} && npm run watch

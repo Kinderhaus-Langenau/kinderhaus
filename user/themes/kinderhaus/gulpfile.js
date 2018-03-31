@@ -58,7 +58,4 @@ gulp.task('clean', function() {
 gulp.task('build:dev', ['clean', 'scss:dev'])
 gulp.task('build', ['clean', 'scss:prod'])
 
-gulp.task('default',function(){
-  gulp.start('build:dev')
-  gulp.start('watch')
-})
+gulp.task('default', ['build:dev', 'watch'])
