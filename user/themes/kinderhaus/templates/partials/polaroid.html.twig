@@ -1,5 +1,5 @@
 <figure class="polaroid {{ classes }}">
   {% set name = image.basename|replace('_', ' ') %}
-  {{ image.lightbox().cropZoom(250, 250).html(name, name, 'polaroid__image') }}
+  {{ image.lightbox().cropZoom(500, 500).html(name, name, 'polaroid__image') }}
   <figcaption class="polaroid__caption">{{ name }}</figcaption>
 </figure>
