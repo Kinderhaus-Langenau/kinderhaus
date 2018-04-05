@@ -12,11 +12,11 @@
 }
 
 .site-navigation {
-  @include packing-paper;
   font-size: $font-size-nav-top;
   text-align: center;
 
-  @include media($tablet-sm) {
+  @include media($tablet-md) {
+    @include packing-paper;
     text-align: right;
     background-image: url('../images/bg_sidenav.png');
     background-size: 100% 100%;

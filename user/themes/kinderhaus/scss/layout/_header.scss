@@ -3,10 +3,25 @@
 }
 
 .site-navigation {
-  @include shift(7);
   display: inline-block;
   height: 65px;
   padding: $spacing-large;
+
+  @include media($tablet-md) {
+    @include shift(4.5);
+  }
+
+  @include media($desktop-sm) {
+    @include shift(7);
+  }
+}
+
+.site-navigation__list {
+  display: none;
+
+  @include media($tablet-md) {
+    display: inline-block;
+  }
 }
 
 .site-navigation__list-element {
@@ -25,8 +40,13 @@
 .logo__image {
   position: absolute;
   top: -56px;
-  left: -38px;
   z-index: 100;
+  max-width: calc(100% - 50px);
+  height: auto;
+
+  @include media($desktop-sm) {
+    left: -38px;
+  }
 }
 
 .red-line {
@@ -48,6 +68,10 @@
 .backdrop__brushstroke {
   position: absolute;
   top: 0;
+
+  @include media($to-desktop-sm) {
+    display: none;
+  }
 }
 
 .backdrop__brushstroke-left {
@@ -60,9 +84,14 @@
 
 .page-navigation {
   @include outer-container($max-width);
+  display: none;
   position: relative;
   top: 25px;
   margin-top: -100px;
+
+  @include media($tablet-md) {
+    display: block;
+  }
 }
 
 .page-navigation__list {
