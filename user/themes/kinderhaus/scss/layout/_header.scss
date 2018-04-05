@@ -18,7 +18,7 @@
 }
 
 .logo__wrapper {
-  @include outer-container($content-max-width);
+  @include outer-container($max-width);
   position: relative;
 }
 
@@ -59,7 +59,7 @@
 }
 
 .page-navigation {
-  @include outer-container($content-max-width);
+  @include outer-container($max-width);
   position: relative;
   top: 25px;
   margin-top: -100px;

@@ -4,8 +4,12 @@
 }
 
 .footer__wrapper {
-  @include outer-container($content-max-width);
+  @include outer-container(90%);
   padding-top: $spacing-medium-large;
+
+  @include media($desktop-sm) {
+    @include outer-container($max-width);
+  }
 }
 
 .footer-navigation {
