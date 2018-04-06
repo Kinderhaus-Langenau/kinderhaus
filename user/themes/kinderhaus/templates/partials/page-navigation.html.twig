@@ -1,21 +1,23 @@
 <ul class="page-navigation__list page-navigation__main-list">
+  {% set submenu = '' %}
   {% for p in pages.children.visible %}
     {% set active = (p.active or p.activeChild) ? 'active' : '' %}
-    <li class="page-navigation__list-item {{ active }}">
+    <li class="{{ active }}">
       <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
 
-      {% for p in pages.children.visible if p.activeChild %}
-        <ul class="page-navigation__list page-navigation__sub-list">
-          {% if p.children.count() > 0 %}
-            {% for child in p.children %}
-              {% set active = child.active ? 'active' : '' %}
-              <li class="page-navigation__sub-list-item {{ active }}">
-                <a href="{{ child.url }}" class="page-navigation__link">{{ child.menu }} </a>
-              </li>
-            {% endfor %}
-          {% endif %}
-        </ul>
-      {% endfor %}
+      {% if p.activeChild and p.children.count > 0 %}
+        {% set submenu = p %}
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
+
+{% if submenu.children %}
+<ul class="page-navigation__list page-navigation__sub-list active">
+  {% for p in submenu.children.visible %}
+    <li class="{{ p.active ? 'active' : '' }}">
+      <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}

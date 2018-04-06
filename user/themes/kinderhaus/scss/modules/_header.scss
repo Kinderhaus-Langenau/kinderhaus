@@ -23,6 +23,25 @@
   }
 }
 
+#mobile-menu__icon {
+  & + label {
+    background: url('../images/menu.svg') no-repeat;
+  }
+}
+
+.mobile-menu__container {
+  background-color: $color-page-navigation-main;
+
+  #mobile-menu__icon:checked ~ & {
+    // Rote Linie in Dropdownmenü einbauen
+    border-top: 10px solid $color-header-red-line;
+
+    @include media($to-phablet-sm) {
+      border-top: 2vw solid $color-header-red-line;
+    }
+  }
+}
+
 .backdrop {
   background-color: $color-backdrop;
 }
@@ -35,14 +54,20 @@
     background-color: $color-page-navigation-main;
   }
 
-  @include media($tablet-sm) {
+  @include media($tablet-lg) {
     background-image: url('../images/bg_main.png');
     background-size: 100% 100%;
   }
 }
 
 .page-navigation__sub-list {
-  background-image: url('../images/bg_sub_nav_blau.png');
+  @include media($tablet-lg) {
+    background-image: url('../images/bg_sub_nav_blau.png');
+  }
+
+  .mobile-menu & {
+    background-color: $color-blue-light;
+  }
 }
 
 .page-navigation__list-item {
