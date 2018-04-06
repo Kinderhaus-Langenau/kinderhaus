@@ -100,8 +100,8 @@
   padding: $spacing-medium-large;
   z-index: 9999;
 
-  @include media($to-desktop-sm) {
-    width: 100%;
+  @include media($to-content-max-width) {
+    left: 5%;
   }
 }
 
@@ -111,6 +111,10 @@
   left: 0;
   right: 0;
   z-index: 99;
+
+  @include media($content-max-width) {
+    width: $max-width;
+  }
 }
 
 .page-navigation__list-item {

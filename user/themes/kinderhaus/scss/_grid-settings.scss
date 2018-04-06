@@ -12,6 +12,7 @@ $size-phablet-lg: 650px;
 $size-tablet-sm: 768px;
 $size-tablet-md: 880px;
 $size-tablet-lg: 1024px;
+$size-content-max-width: $max-width;
 $size-desktop-sm: 1366px;
 
 $phablet-sm: new-breakpoint($size-phablet-sm);
@@ -19,7 +20,9 @@ $phablet-lg: new-breakpoint($size-phablet-lg);
 $tablet-sm: new-breakpoint($size-tablet-sm);
 $tablet-md: new-breakpoint($size-tablet-md);
 $tablet-lg: new-breakpoint($size-tablet-lg);
+$content-max-width: new-breakpoint($size-content-max-width);
 $desktop-sm: new-breakpoint($size-desktop-sm);
 
 $to-tablet-sm: new-breakpoint(max-width $size-tablet-sm - 1);
+$to-content-max-width: new-breakpoint(max-width $size-content-max-width - 1);
 $to-desktop-sm: new-breakpoint(max-width $size-desktop-sm - 1);
