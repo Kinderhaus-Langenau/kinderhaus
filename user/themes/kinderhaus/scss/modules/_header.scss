@@ -15,7 +15,7 @@
   font-size: $font-size-nav-top;
   text-align: center;
 
-  @include media($tablet-md) {
+  @include media($tablet-lg) {
     @include packing-paper;
     text-align: right;
     background-image: url('../images/bg_sidenav.png');
@@ -28,6 +28,7 @@
 }
 
 .page-navigation__list {
+  list-style-type: none;
   font-size: $font-size-nav-main;
 
   @include media($to-tablet-sm) {
@@ -50,8 +51,8 @@
   line-height: 50px;
 }
 
-.page-navigation__list-item--selected {
-  &::before {
+.active {
+  .page-navigation__main-list > &::before {
     background: url("../images/oese.png") no-repeat bottom/21px;
   }
 }
@@ -64,7 +65,7 @@
     color: $color-blue-dark;
   }
 
-  .page-navigation__list-item--selected > & {
+  .active > & {
     color: $color-blue-dark;
   }
 }

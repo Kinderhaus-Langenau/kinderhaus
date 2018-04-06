@@ -23,6 +23,7 @@ $tablet-lg: new-breakpoint($size-tablet-lg);
 $content-max-width: new-breakpoint($size-content-max-width);
 $desktop-sm: new-breakpoint($size-desktop-sm);
 
+$to-phablet-sm: new-breakpoint(max-width $size-phablet-sm - 1);
 $to-tablet-sm: new-breakpoint(max-width $size-tablet-sm - 1);
 $to-content-max-width: new-breakpoint(max-width $size-content-max-width - 1);
 $to-desktop-sm: new-breakpoint(max-width $size-desktop-sm - 1);
