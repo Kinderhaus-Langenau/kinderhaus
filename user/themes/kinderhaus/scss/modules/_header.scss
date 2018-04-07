@@ -24,8 +24,11 @@
 }
 
 #mobile-menu__icon {
-  & + label {
-    background: url('../images/menu.svg') no-repeat;
+  & + label::before {
+    content: "\F0C9";
+    font-family: FontAwesome;
+    font-size: 1.6rem;
+    color: $color-header-red-line;
   }
 }
 
@@ -74,6 +77,10 @@
   color: $color-white;
   list-style-type: none;
   line-height: 50px;
+}
+
+.page-navigation__dropdown-icon {
+  color: $color-page-navigation-dropdown-icon;
 }
 
 .active {

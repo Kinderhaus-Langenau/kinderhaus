@@ -5,6 +5,7 @@
       <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
 
       {% if p.children.count > 0 %}
+        <i class="page-navigation__dropdown-icon fa fa-caret-down"></i>
         <ul class="page-navigation__list page-navigation__sub-list {{ active }}">
           {{ _self.loop(p) }}
         </ul>
