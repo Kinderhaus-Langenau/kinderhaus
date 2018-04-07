@@ -10,9 +10,9 @@
   </head>
 
   <body>
-      {% block header %}
-        {% include 'partials/header.html.twig' %}
-      {% endblock header %}
+    {% block header %}
+      {% include 'partials/header.html.twig' %}
+    {% endblock header %}
 
     <div class="content__wrapper">
       <main class="content">
@@ -29,9 +29,9 @@
       </aside>
     </div>
 
-      {% block footer %}
-        {% include 'partials/footer.html.twig' %}
-      {% endblock footer %}
+    {% block footer %}
+      {% include 'partials/footer.html.twig' %}
+    {% endblock footer %}
 
     {% block extra_js %}
       {% do assets.addJs('theme://js/kinderhaus.js', 100) %}
