@@ -1,5 +1,8 @@
 <figure class="polaroid {{ classes }}">
-  {% set name = image.basename|replace('_', ' ') %}
-  {{ image.lightbox().cropZoom(500, 500).html(name, name, 'polaroid__image') }}
-  <figcaption class="polaroid__caption">{{ name }}</figcaption>
+  {% if not title %}
+    {% set title = image.basename|replace('_', ' ') %}
+  {% endif %}
+
+  {{ image.lightbox().cropZoom(500, 500).html(title, title, 'polaroid__image') }}
+  <figcaption class="polaroid__caption">{{ title }}</figcaption>
 </figure>
