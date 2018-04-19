@@ -24,7 +24,9 @@ $(document).ready(function() {
   });
 
   function closeSubMenu($target) {
-    $target.toggleClass('closed');
+    typecheckJqueryObject($target);
+
+    $target.toggleClass('closed', true);
 
     $target.siblings('.page-navigation__dropdown-icon')
       .removeClass('fa-caret-down')
@@ -32,10 +34,17 @@ $(document).ready(function() {
   }
 
   function openSubMenu($target) {
-    $target.toggleClass('closed');
+    typecheckJqueryObject($target);
+
+    $target.toggleClass('closed', false);
 
     $target.siblings('.page-navigation__dropdown-icon')
       .removeClass('fa-caret-left')
       .addClass('fa-caret-down');
+  }
+
+  function typecheckJqueryObject(obj) {
+    if(!(obj instanceof $))
+      throw new TypeError("Argument ist kein jQuery-Objekt.");
   }
 });
