@@ -1,11 +1,13 @@
 .footer {
-  height: 100px;
-  font-size: $font-size-nav-bottom;
+  padding: $spacing-medium-large 0;
+
+  nav + nav {
+    padding-top: 0;
+  }
 }
 
-.footer__wrapper {
+.footer__wrapper, .footer > .site-navigation {
   @include outer-container(90%);
-  padding-top: $spacing-medium-large;
 
   @include media($desktop-sm) {
     @include outer-container($max-width);
@@ -16,6 +18,10 @@
   li {
     display: inline-block;
 
+    & + li {
+      margin-left: $spacing-small;
+    }
+
     a {
       margin-right: $spacing-large;
 
@@ -23,5 +29,19 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+.footer > .site-navigation {
+  display: block;
+  padding: 0;
+  height: auto;
+
+  li + li {
+    margin-left: $spacing-small;
+  }
+
+  @include media($tablet-lg) {
+    display: none;
   }
 }

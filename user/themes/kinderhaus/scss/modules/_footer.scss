@@ -1,3 +1,8 @@
 .footer {
   @include packing-paper;
+  font-size: $font-size-nav-bottom;
+
+  & > .site-navigation {
+    text-align: left;
+  }
 }
