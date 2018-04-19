@@ -44,7 +44,7 @@ gulp.task('scss:prod', function () {
     .pipe(gulp.dest(paths.css))
 })
 
-gulp.task('watch', function() {
+gulp.task('watchAllFiles', function() {
   livereload.listen()
   gulp.watch(paths.scss, ['scss:dev'])
   gulp.watch(paths.templates, (files) => { livereload.changed(files)})
@@ -57,5 +57,6 @@ gulp.task('clean', function() {
 
 gulp.task('build:dev', ['clean', 'scss:dev'])
 gulp.task('build', ['clean', 'scss:prod'])
+gulp.task('watch', ['clean', 'build:dev', 'watchAllFiles'])
 
 gulp.task('default', ['build:dev', 'watch'])

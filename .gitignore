@@ -13,6 +13,8 @@ tmp/
 user/accounts/
 user/pages/
 user/data/
+user/config/security.yaml
+user/test.kinderhaus-langenau.de/config/security.yaml
 vendor/
 webserver-configs/
 CHANGELOG.md

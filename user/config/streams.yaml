@@ -1,0 +1,6 @@
+schemes:
+  image:
+    type: ReadOnlyStream
+    prefixes:
+      '':
+        - user/images

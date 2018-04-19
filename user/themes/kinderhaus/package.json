@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "php -S 0.0.0.0:8000 -t ../../.. ../../../system/router.php & gulp",
-    "build-dev": "gulp build",
+    "build-dev": "gulp build:dev",
     "build": "gulp build",
     "watch": "gulp watch",
     "clean": "gulp clean"
