@@ -1,6 +1,6 @@
 <ul class="page-navigation__list page-navigation__main-list">
   {% set submenu = '' %}
-  {% for p in pages.children.visible %}
+  {% for p in pages.children.visible if p.header.hideInMenu != true %}
     {% set active = (p.active or p.activeChild) ? 'active' : '' %}
     <li class="{{ active }}">
       <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
