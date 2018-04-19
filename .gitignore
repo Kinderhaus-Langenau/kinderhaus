@@ -10,11 +10,13 @@ node_modules/
 robots.txt
 system/
 tmp/
-user/*
-!user/themes/
-!user/themes/kinderhaus/images
+user/accounts/
+user/pages/
+user/data/
 vendor/
 webserver-configs/
 CHANGELOG.md
 CONTRIBUTING.md
 README.md
+LICENSE.txt
+CODE_OF_CONDUCT.md
