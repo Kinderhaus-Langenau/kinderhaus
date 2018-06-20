@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Größerer Abstand zwischen Hauptmenü und Content, wenn Submenü offen ist
   if($('.page-navigation__sub-list:visible').length > 0)
     $('.content__wrapper').addClass('margin-top__large');
 
