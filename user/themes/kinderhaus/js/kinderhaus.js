@@ -24,6 +24,42 @@ $(document).ready(function() {
     }
   });
 
+  // Text nach 2 Absätzen zusammenklappen
+  $('.content.content--fold h1').each(function() {
+    var paragraphs = $(this).nextUntil('h1');
+
+    var cuttingPoint = function() {
+      var counter = 0;
+      var cuttingPoint = 0;
+
+      paragraphs.each(function(index, element) {
+        if(element.tagName === 'P') counter++;
+        if(counter >=2) {
+          cuttingPoint =  index + 1;
+          return false;
+        }
+      });
+
+      return cuttingPoint;
+    }.bind(paragraphs)();
+
+    paragraphs
+      .slice(cuttingPoint)
+      .wrapAll('<div class="hideable-text"></div>');
+  });
+
+  $('.hideable-text')
+    .before('<div class="read-more">&nabla; Mehr lesen</div>');
+
+  $('.read-more').click(function() {
+    $(this)
+      .next('.hideable-text')
+      .removeClass('hideable-text');
+
+    $(this).hide();
+  });
+
+  // Functions
   function closeSubMenu($target) {
     typecheckJqueryObject($target);
 

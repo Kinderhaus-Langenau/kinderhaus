@@ -1,0 +1,28 @@
+title: Default
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  validation: loose
+
+  fields:
+
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            header.fold_content:
+              ordering@: 2
+              type: toggle
+              default: 0
+              options:
+                0: PLUGIN_KINDERHAUS.NO
+                1: PLUGIN_KINDERHAUS.YES
+              label: PLUGIN_KINDERHAUS.FOLD_CONTENT
+              highlight: 1
+              validate:
+                type: bool

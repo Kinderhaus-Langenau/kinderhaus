@@ -15,7 +15,7 @@
     {% endblock header %}
 
     <div class="content__wrapper">
-      <main class="content">
+      <main class="content{% if page.header.fold_content %} content--fold{% endif %}">
         {% block content %}
           {{ page.content }}
         {% endblock content %}
