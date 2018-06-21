@@ -1,6 +1,7 @@
 <figure class="polaroid {{ classes }}">
-  {% if not title %}
-    {% set title = image.basename|replace('_', ' ') %}
+  {% set image = page.media[image] %}
+  {% if title is empty %}
+    {% set title = image.basename|replace('_', ' ')|title %}
   {% endif %}
 
   {{ image.lightbox().cropZoom(500, 500).html(title, title, 'polaroid__image') }}
