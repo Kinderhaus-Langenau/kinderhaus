@@ -6,6 +6,9 @@ all: serve
 serve:
 	cd ${THEME_DIR} && npm start
 
+serve-watch:
+	cd ${THEME_DIR} && npm run serve-watch
+
 clearcache:
 	${GRAV_BIN} clearcache
 
