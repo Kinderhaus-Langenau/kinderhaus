@@ -1,0 +1,31 @@
+form:
+  validation: loose
+  fields:
+    section:
+      type: section
+      title: Neuer Termin
+
+    title:
+      type: text
+      label: Titel
+      validate:
+        required: true
+
+    folder:
+      type: hidden
+      default: '@slugify-title'
+
+    route:
+      type: hidden
+      default: /termine
+
+    name:
+      type: hidden
+      default: 'termin'
+
+    visible:
+      type: hidden
+      default: 'false'
+
+    blueprint:
+      type: blueprint

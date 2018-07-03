@@ -1,0 +1,24 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <h1>{{ page.title }}</h1>
+  <p>
+    {{ page.content }}
+  </p>
+  {% for item in page.collection %}
+    <div class="list-item">
+      <header>
+        <h2>{{ item.title }}</h2>
+        <span class="termin-info"><i class="fa fa-calendar fa-fw"></i>{{ item.header.termin.datum|date('d.m.Y') }}</span>
+        <span class="termin-info"><i class="fa fa-clock-o fa-fw"></i>{{ item.header.termin.beginn|date('H:i') }} Uhr
+
+          {% if item.header.termin.ende %}
+            - {{ item.header.termin.ende|date('H:i') }} Uhr
+          {% endif %}
+        </span>
+        <span class="termin-info"><i class="fa fa-map-marker fa-fw"></i>{{ item.header.termin.veranstaltungsort }}</span>
+      </header>
+      {{ item.content }}
+    </div>
+  {% endfor %}
+{% endblock content %}

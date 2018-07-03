@@ -1,0 +1,47 @@
+title: Termin
+visible: false
+
+'@extends':
+    type: default
+    context: blueprints://
+
+form:
+  validation: strict
+
+  fields:
+    columns:
+      type: columns
+      fields:
+        column1:
+          type: column
+          fields:
+            header.termin.datum:
+              type: datetime
+              label: Datum des Termins
+              format: 'd.m.Y'
+              validate:
+                required: true
+                type: datetime
+            header.termin.beginn:
+              type: datetime
+              label: Beginn
+              format: 'H:i'
+              validate:
+                required: true
+                type: datetime
+            header.termin.ende:
+              type: datetime
+              label: Ende
+              format: 'H:i'
+              validate:
+                required: false
+                type: datetime
+
+        column2:
+          type: column
+          fields:
+            header.termin.veranstaltungsort:
+              type: string
+              label: Veranstaltungsort/Treffpunkt
+              validate:
+                required: true

@@ -23,8 +23,9 @@
 
       <aside class="sidebar">
         {% block sidebar %}
-          {% set template = 'partials/sidebar/' ~ page.header.sidebar|default('kontakt') ~ '.html.twig'%}
-          {% include template %}
+          {% include "partials/sidebar/termin.html.twig" %}
+          {% include "partials/sidebar/öffnungszeiten.html.twig" %}
+          {% include "partials/sidebar/kontakt.html.twig" %}
         {% endblock sidebar %}
       </aside>
     </div>

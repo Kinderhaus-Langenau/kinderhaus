@@ -1,9 +1,13 @@
-.sidebar {
-  & > * + * {
+.sidebar-element {
+  & + & {
     border-top: dotted 5px $color-header-dots;
   }
+
+  h2 {
+    font-size: 27px;
+  }
 }
-.sidebar__post-it {
+.sidebar-element__post-it {
   font-family: $font-links;
   color: #FFF;
   line-height: 1.5;
@@ -42,13 +46,7 @@
   }
 }
 
-.sidebar__contact {
-  h2 {
-    font-size: 27px;
-  }
-}
-
-.sidebar__oeffnungszeiten {
+.sidebar-element__oeffnungszeiten {
   li {
     list-style-type: none;
   }

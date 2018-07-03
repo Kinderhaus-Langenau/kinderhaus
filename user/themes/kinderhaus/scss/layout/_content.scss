@@ -99,3 +99,16 @@
   height: 1px;
   overflow: hidden;
 }
+
+.termin-info {
+  display: block;
+
+  & > i {
+    margin-right: $spacing-small;
+  }
+}
+
+.termin-info__more {
+  text-align: center;
+  margin-top: $spacing-medium;
+}

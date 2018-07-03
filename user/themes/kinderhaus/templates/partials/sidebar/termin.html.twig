@@ -1,0 +1,20 @@
+{% set termin = page.find('/termine').collection|first %}
+{% if termin %}
+  <section class="sidebar-element sidebar-element__termin">
+    <h1>Nächster Termin:</h1>
+    <h3>{{ termin.title }}</h3>
+
+    {% set data = termin.header.termin %}
+    <span class="termin-info"><i class="fa fa-calendar fa-fw"></i>{{ data.datum|date('d.m.Y') }}</span>
+    <span class="termin-info"><i class="fa fa-clock-o fa-fw"></i>{{ data.beginn|date('H:i') }}
+      {% if data.ende %}
+        - {{ data.ende|date('H:i') }}
+      {% endif %}
+      Uhr
+    </span>
+
+    <span class="termin-info"><i class="fa fa-map-marker fa-fw"></i>{{ data.veranstaltungsort }}</span>
+    {{ termin.summary }}
+    <a class="termin-info termin-info__more" href="{{ page.find('/termine').url }}">Weitere Termine</a>
+  </section>
+{% endif %}

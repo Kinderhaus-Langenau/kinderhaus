@@ -4,6 +4,8 @@ namespace Grav\Plugin;
 use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 use Grav\Plugin\Kinderhaus\Parsedown;
+use Grav\Common\Filesystem\Folder;
+use DateTime;
 
 /**
  * Class KinderhausPlugin
@@ -24,12 +26,28 @@ class KinderhausPlugin extends Plugin
   public static function getSubscribedEvents()
   {
     return [
-      'onTwigExtensions' => ['onTwigExtensions', 0]
+      'onTwigExtensions' => ['onTwigExtensions', 0],
+      'onPagesInitialized' => ['deleteOldTermine', 1],
     ];
   }
 
   public function onTwigExtensions($event) {
     require_once(__DIR__ . '/twig/KinderhausExtension.php');
     $this->grav['twig']->twig->addExtension(new KinderhausExtension());
+  }
+
+  public function deleteOldTermine() {
+    $pages = $this->grav['pages'];
+    $termine = $pages->find('/termine')->children();
+    $now = new DateTime();
+    $now = $now->getTimestamp();
+
+    foreach($termine as $termin) {
+      $date = strtotime($termin->header()->termin['datum']);
+
+      if($date < $now) {
+        Folder::delete($termin->path());
+      }
+    }
   }
 }

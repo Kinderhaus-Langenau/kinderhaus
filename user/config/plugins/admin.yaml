@@ -43,3 +43,7 @@ popularity:
     daily: 30
     monthly: 12
     visitors: 20
+add_modals:
+  termin:
+    label: Neuer Termin
+    blueprint: admin/pages/neuer_termin

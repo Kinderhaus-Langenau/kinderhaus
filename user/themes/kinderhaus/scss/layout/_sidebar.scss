@@ -4,14 +4,16 @@
   @include media($tablet-sm) {
     @include span-columns(4);
   }
+}
 
-  & > section + section {
+.sidebar-element {
+  & + & {
     margin-top: $spacing-large;
-    padding-top: $spacing-large;
+    padding-top: $spacing-medium;
   }
 }
 
-.sidebar__post-it {
+.sidebar-element__post-it {
   position: relative;
 
   & > img {
@@ -46,15 +48,22 @@
   }
 }
 
-.sidebar__contact {
+.sidebar-element__contact {
   & > h2 {
     margin: 0;
   }
 }
 
-.sidebar__oeffnungszeiten {
-  & > h2 {
+.sidebar-element {
+  & > b {
+    display: block;
+  }
+  & > h2, & > h3, & > b {
     margin-top: $spacing-medium;
-    margin-bottom: 0;
+    margin-bottom: $spacing-extra-small;
+  }
+
+  address {
+    margin: 0;
   }
 }
