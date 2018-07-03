@@ -1,7 +1,7 @@
 {% set termin = page.find('/termine').collection|first %}
 {% if termin %}
   <section class="sidebar-element sidebar-element__termin">
-    <h1>Nächster Termin:</h1>
+    <h2>Nächster Termin:</h2>
     <h3>{{ termin.title }}</h3>
 
     {% set data = termin.header.termin %}
