@@ -26,24 +26,32 @@ $(document).ready(function() {
 
   // Text nach 2 Absätzen zusammenklappen
   $('.content.content--fold h1').each(function() {
-    var paragraphs = $(this).nextUntil('h1');
+    var contentElements = $(this).nextUntil('h1');
 
     var cuttingPoint = function() {
-      var counter = 0;
       var cuttingPoint = 0;
+      var ignored = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'B', 'I'];
 
-      paragraphs.each(function(index, element) {
-        if(element.tagName === 'P') counter++;
-        if(counter >=2) {
-          cuttingPoint =  index + 1;
+      contentElements.each(function(index, element) {
+        if(contentElements.length < 2) {
+          cuttingPoint = 1;
+          return false;
+        }
+
+        if(ignored.indexOf(contentElements[index + 1].tagName) > -1) {
+          return true;
+        }
+
+        if(index >= 2) {
+          cuttingPoint = index;
           return false;
         }
       });
 
       return cuttingPoint;
-    }.bind(paragraphs)();
+    }.bind(contentElements)();
 
-    paragraphs
+    contentElements
       .slice(cuttingPoint)
       .wrapAll('<div class="hideable-text"></div>');
   });
