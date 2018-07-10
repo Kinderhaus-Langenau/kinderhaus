@@ -23,9 +23,15 @@
 
       <aside class="sidebar">
         {% block sidebar %}
-          {% include "partials/sidebar/termin.html.twig" %}
-          {% include "partials/sidebar/öffnungszeiten.html.twig" %}
-          {% include "partials/sidebar/kontakt.html.twig" %}
+          {% if page.header.sidebar is not defined or page.header.sidebar == 'standard' %}
+            {% set sidebar = config.theme.default_sidebar %}
+          {% else %}
+            {% set sidebar = page.header.sidebar %}
+          {% endif %}
+
+          {% for partial in sidebar|split(',') %}
+            {% include "partials/sidebar/" ~ trim(partial) ~ ".html.twig" %}
+          {% endfor %}
         {% endblock sidebar %}
       </aside>
     </div>

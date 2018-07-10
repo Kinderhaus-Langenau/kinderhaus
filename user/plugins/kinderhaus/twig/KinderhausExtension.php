@@ -23,10 +23,13 @@ class KinderhausExtension extends \Twig_Extension
     }
 
     return $this->grav['twig']->processTemplate('partials/polaroid.html.twig',
-                                                ['page' => $this->grav['page'],
+                                                [
+                                                 'page' => $this->grav['page'],
                                                  'image' => $img,
                                                  'title' => $title,
-                                                 'classes' => $alignment]);
+                                                 'classes' => $alignment
+                                                ]
+    );
   }
 
   public function getFunctions()
