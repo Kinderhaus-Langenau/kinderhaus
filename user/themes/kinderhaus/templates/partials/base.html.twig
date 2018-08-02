@@ -23,15 +23,18 @@
 
       <aside class="sidebar">
         {% block sidebar %}
-          {% if page.header.sidebar is not defined or page.header.sidebar == 'standard' %}
-            {% set sidebar = config.theme.default_sidebar %}
+          {% if page.header.sidebar == 'none' %}
+            {% set sidebar = '' %}
           {% else %}
             {% set sidebar = page.header.sidebar %}
           {% endif %}
 
-          {% for partial in sidebar|split(',') %}
-            {% include "partials/sidebar/" ~ trim(partial) ~ ".html.twig" %}
-          {% endfor %}
+
+          {% if sidebar is not empty %}
+            {% for partial in sidebar|split(',') %}
+              {% include "partials/sidebar/" ~ trim(partial) ~ ".html.twig" %}
+            {% endfor %}
+          {% endif %}
         {% endblock sidebar %}
       </aside>
     </div>

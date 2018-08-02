@@ -30,9 +30,9 @@ form:
             header.sidebar:
               type: radio
               label: Sidebar
-              default: 'standard'
+              default: 'none'
               options:
-                'standard': Standard
+                'none': 'Keine Sidebar'
                 'kontakt, öffnungszeiten': Kontakt, Öffnungszeiten
                 'öffnungszeiten, kontakt': Öffnungszeiten, Kontakt
                 'öffnungszeiten, kontakt, post-it': Öffnungszeiten, Kontakt, Post-It
