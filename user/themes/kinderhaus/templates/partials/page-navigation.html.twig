@@ -5,7 +5,7 @@
     <li class="{{ active }}">
       <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
 
-      {% if p.activeChild and p.children.count > 0 %}
+      {% if active and p.children.count > 0 %}
         {% set submenu = p %}
       {% endif %}
     </li>
