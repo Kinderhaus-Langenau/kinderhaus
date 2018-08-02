@@ -62,7 +62,8 @@ $(document).ready(function() {
   $('.read-more').click(function() {
     $(this)
       .next('.hideable-text')
-      .removeClass('hideable-text');
+      .contents()
+      .unwrap();
 
     $(this).hide();
   });

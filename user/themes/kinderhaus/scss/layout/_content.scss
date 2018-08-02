@@ -113,3 +113,19 @@
   text-align: center;
   margin-top: $spacing-medium;
 }
+
+.read-more {
+  position: relative;
+  margin-top: -#{$spacing-small};
+  margin-bottom: $spacing-extra-large;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -150px;
+    height: 150px;
+  }
+}

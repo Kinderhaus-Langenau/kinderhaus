@@ -44,7 +44,15 @@
 .read-more {
   cursor: pointer;
   font-weight: bold;
-  text-align: center;
+  color: $color-read-more;
+
+  &:hover {
+    color: $color-read-more-hover;
+  }
+
+  &::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), $color-content-bg);
+  }
 }
 
 .termin-info {
