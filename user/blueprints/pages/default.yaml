@@ -33,6 +33,12 @@ form:
               default: 'none'
               options:
                 'none': 'Keine Sidebar'
-                'kontakt, öffnungszeiten': Kontakt, Öffnungszeiten
+                'kontakt': Kontakt
+                'termin': Termin
+                'termin, öffnungszeiten': Termin, Öffnungszeiten
+                'termin, kontakt': Termin, Kontakt
+                'termin, öffnungszeiten, kontakt': Termin, Öffnungszeiten, Kontakt
+                'termin, öffnungszeiten, kontakt, post-it': Termin, Öffnungszeiten, Kontakt, Post-It
+                'öffnungszeiten': Öffnungszeiten
                 'öffnungszeiten, kontakt': Öffnungszeiten, Kontakt
                 'öffnungszeiten, kontakt, post-it': Öffnungszeiten, Kontakt, Post-It
