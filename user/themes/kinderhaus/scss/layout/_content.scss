@@ -48,13 +48,13 @@
   }
 }
 
-.modular-row {
+.row {
   & + & {
     margin-top: $spacing-extra-large;
   }
 }
 
-.modular-bildgruppe {
+.imagegroup {
   @include outer-container($max-width);
   display: flex;
   flex-wrap: wrap;
