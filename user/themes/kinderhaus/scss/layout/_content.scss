@@ -59,9 +59,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: $spacing-extra-large 0;
 }
 
 .polaroid {
+  display: block;
   padding: $spacing-medium;
   width: 100%;
 
@@ -70,7 +72,11 @@
   }
 
   @include media($desktop-sm) {
-    max-width: 33%;
+    max-width: 30%;
+  }
+
+  .imagegroup & {
+    display: inline-block;
   }
 }
 
@@ -84,15 +90,18 @@
 }
 
 .align-left {
-  float: left;
   margin-right: $spacing-medium;
   margin-bottom: $spacing-medium;
 }
 
 .align-right {
-  float: right;
-  margin-left: $spacing-medium;
-  margin-bottom: $spacing-medium;
+  @include media($phablet-sm) {
+    margin-left: 50%;
+  }
+
+  @include media($desktop-sm) {
+    margin-left: 70%;
+  }
 }
 
 .hideable-text {
