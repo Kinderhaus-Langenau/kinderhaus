@@ -9,7 +9,7 @@ class KinderhausExtension extends \Twig_Extension
     $this->grav = Grav::instance();
   }
 
-  public function generatePolaroid($img, $title = null, $alignment = null) {
+  public function generatePolaroid($img, $title = null, $alignment = null, $rotation = 0) {
     switch ($alignment) {
     case 'mitte':
       $alignment = 'align-center';
@@ -27,7 +27,8 @@ class KinderhausExtension extends \Twig_Extension
                                                  'page' => $this->grav['page'],
                                                  'image' => $img,
                                                  'title' => $title,
-                                                 'classes' => $alignment
+                                                 'classes' => $alignment,
+                                                 'rotation' => $rotation
                                                 ]
     );
   }

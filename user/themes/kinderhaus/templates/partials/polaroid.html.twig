@@ -1,4 +1,13 @@
-<figure class="polaroid {{ classes }}">
+{% if rotation %}
+  {% set rotation = 'transform: rotate(' ~ rotation ~ 'deg);' %}
+{% endif %}
+
+<figure class="polaroid {{ classes }}"
+
+  {% if rotation %}
+    style="{{ rotation }}">
+  {% endif %}
+
   {% set image = page.media[image] %}
   {% if title is empty %}
     {% set title = image.basename|replace('_', ' ')|title %}
