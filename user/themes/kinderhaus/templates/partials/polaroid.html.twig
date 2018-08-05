@@ -5,8 +5,9 @@
 <figure class="polaroid {{ classes }}"
 
   {% if rotation %}
-    style="{{ rotation }}">
+    style="{{ rotation }}"
   {% endif %}
+>
 
   {% set image = page.media[image] %}
   {% if title is empty %}
