@@ -51,3 +51,9 @@
     list-style-type: none;
   }
 }
+
+.sidebar-element__links {
+  & > a {
+    display: block;
+  }
+}

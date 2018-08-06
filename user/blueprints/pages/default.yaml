@@ -27,6 +27,12 @@ form:
               validate:
                 type: bool
 
+            header.sidebar_links:
+              type: array
+              label: Links
+              placeholder_key: Name
+              placeholder_value: Ziel
+
             header.sidebar:
               type: radio
               label: Sidebar

@@ -30,6 +30,10 @@
           {% endif %}
 
 
+          {% if page.header.sidebar_links %}
+            {% include "partials/sidebar/links.html.twig" with {'links': page.header.sidebar_links} %}
+          {% endif %}
+
           {% if sidebar is not empty %}
             {% for partial in sidebar|split(',') %}
               {% include "partials/sidebar/" ~ trim(partial) ~ ".html.twig" %}
