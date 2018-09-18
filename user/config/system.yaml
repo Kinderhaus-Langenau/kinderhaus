@@ -6,9 +6,9 @@ force_ssl: false
 username_regex: '^[a-z0-9_-]{3,16}$'
 pwd_regex: '.*'
 languages:
-  include_default_lang: true
-  translations: true
-  translations_fallback: true
+  include_default_lang: false
+  translations: false
+  translations_fallback: false
   session_store_active: false
   http_accept_language: false
   override_locale: false
