@@ -1,3 +1,2 @@
-!user/pages/**
-!user/config/**
-!user/plugins/kinderhaus/**
+-user/pages/
+-user/config/**
