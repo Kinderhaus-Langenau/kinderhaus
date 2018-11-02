@@ -12,6 +12,7 @@
 }
 
 .site-navigation {
+  font-family: $font-overlock;
   font-size: $font-size-nav-top;
   text-align: center;
 
@@ -90,7 +91,7 @@
 }
 
 .page-navigation__link {
-  font-family: $font-default;
+  font-family: $font-overlock;
   color: $color-white;
 
   &:hover {

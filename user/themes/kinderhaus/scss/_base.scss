@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Nunito";
+  src: local("Nunito"),
+       url("../fonts/Nunito/Nunito-Regular.ttf") format("truetype"),
+       url("../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gloria Hallelujah";
+  src: local("Gloria Hallelujah"),
+       url("../fonts/Gloria_Hallelujah/GloriaHallelujah.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Overlock";
+  src: local("Overlock"),
+       url("../fonts/Overlock/Overlock-Regular.ttf") format("truetype"),
+       url("../fonts/Overlock/Overlock-Bold.ttf") format("truetype");
+}
+
 html, body {
   height: 100%;
 }

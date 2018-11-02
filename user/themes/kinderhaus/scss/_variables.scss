@@ -7,10 +7,14 @@ $font-size-h1: 1.5rem;
 
 $line-height-default: 1.3;
 
-$font-default: 'Nunito', sans-serif;
-$font-bold: 'Nunito', cursive;
-$font-links: 'Gloria Hallelujah', cursive;
-$font-post-it-button: 'Overlock', serif;
+$font-overlock: 'Overlock', serif;
+$font-nunito: 'Nunito', sans-serif;
+$font-gloria-hallelujah: 'Gloria Hallelujah', cursive;
+
+$font-default: $font-nunito;
+$font-bold: $font-nunito;
+$font-links: $font-gloria-hallelujah;
+$font-post-it-button: $font-overlock;
 
 // spacings
 $spacing-extra-small: 5px;

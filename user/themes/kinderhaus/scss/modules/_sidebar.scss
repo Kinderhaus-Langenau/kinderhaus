@@ -1,4 +1,12 @@
 .sidebar-element {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-overlock;
+  }
+
+  b {
+    font-family: $font-overlock;
+  }
+
   & + & {
     border-top: dotted 5px $color-header-dots;
   }
