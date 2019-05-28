@@ -73,11 +73,3 @@ RewriteRule ^(LICENSE\.txt|composer\.lock|composer\.json|\.htaccess)$ error [F]
 Options -Indexes
 DirectoryIndex index.php index.html index.htm
 # End - Prevent Browsing and Set Default Resources
-
-RewriteCond %{HTTP_HOST} test.kinderhaus-langenau.de [NC]
-RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
-AuthType Basic
-AuthName "Testseite"
-AuthUserFile "/home/kinderha/.htpasswds/test.kinderhaus-langenau.de/passwd"
-require valid-user
