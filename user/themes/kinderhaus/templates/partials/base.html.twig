@@ -1,7 +1,7 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 
 <!DOCTYPE html>
-<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<html lang="{{ grav.language.getDefault ?: theme_config.default_lang }}">
   <head>
     {% block head %}
       {% include 'partials/head.html.twig' %}
