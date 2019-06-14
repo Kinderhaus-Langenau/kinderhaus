@@ -57,7 +57,7 @@ $(document).ready(function() {
   });
 
   $('.hideable-text')
-    .before('<div class="read-more">&nabla; Mehr lesen</div>');
+    .before('<div class="read-more"><span class="read-more__arrow"></span> Mehr lesen</div>');
 
   $('.read-more').click(function() {
     $(this)

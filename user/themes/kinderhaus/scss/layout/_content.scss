@@ -142,4 +142,17 @@
     top: -150px;
     height: 150px;
   }
+
+  &:hover {
+    .read-more__arrow {
+      background: url('/user/themes/kinderhaus/images/read_more_over.png') no-repeat center;
+    }
+  }
+}
+
+.read-more__arrow {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('/user/themes/kinderhaus/images/read_more_normal.png') no-repeat center;
 }

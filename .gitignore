@@ -17,6 +17,7 @@ user/config/security.yaml
 user/test.kinderhaus-langenau.de/config/security.yaml
 user/plugins/*
 !user/plugins/kinderhaus/
+!user/themes/kinderhaus/images
 vendor/
 webserver-configs/
 CHANGELOG.md
