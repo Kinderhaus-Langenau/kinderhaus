@@ -1,8 +1,8 @@
 enabled: true                               # Enable the plugin
-built_in_css: true                          # Use built-in CSS
-route:                                      # Specific route for Login page (default is '/login')
+built_in_css: false                          # Use built-in CSS
+route: '/login'                                      # Specific route for Login page (default is '/login')
 redirect_to_login: true                     # If you try to access a page you don't have access to, should you redirect to login route
-redirect_after_login:                       # Path to redirect to after a successful login (eg '/user_profile')
+redirect_after_login: '/intern'                       # Path to redirect to after a successful login (eg '/user_profile')
 route_activate: '/activate_user'            # Route for the user activation process
 route_forgot: '/forgot_password'            # Route for the forgot password process
 route_reset: '/reset_password'              # Route for the reset password process
@@ -11,7 +11,7 @@ route_register: '/user_register'            # Route for the user registration pa
 route_unauthorized: '/user_unauthorized'    # Route for a page to display if user is unauthorized
 
 dynamic_page_visibility: false              # Integrate access into page visibility so things can be shown or hidden in the menu
-parent_acl: false                           # Look to parent `access` rules for access requirements
+parent_acl: true                           # Look to parent `access` rules for access requirements
 protect_protected_page_media: false         # Take `access` rules into account when directly accessing a page's media
 
 rememberme:
@@ -31,9 +31,9 @@ user_registration:
     - 'username'                            # This should match up with your registration form definition
     - 'password'
     - 'email'
-    - 'fullname'
-    - 'title'
-    - 'level'
+    # - 'fullname'
+    # - 'title'
+    # - 'level'
 
   default_values:                           # Any default values for fields you would like to set
     level: Newbie                           # Here the 'level' field will be pre-populated with 'Newbie' text
