@@ -29,7 +29,7 @@ pages:
     long: 'F jS \a\t g:ia'
   publish_dates: true
   process:
-    markdown: true
+    markdown: false
     twig: true
   twig_first: true
   never_cache_twig: true

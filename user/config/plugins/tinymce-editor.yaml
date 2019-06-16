@@ -1,5 +1,4 @@
 enabled: true
-apikey: ''
 plugins:
   - advlist
   - anchor
@@ -25,6 +24,8 @@ plugins:
   - toc
   - visualchars
   - wordcount
+  - polaroid
+  - bildgruppe
 parameters:
   -
     name: fontsize_formats
@@ -57,7 +58,7 @@ menu:
     items: code
 toolbar:
   -
-    row: 'newdocument print | cut copy paste | undo redo | searchreplace visualchars | table image media emoticons toc | insertdatetime pagebreak charmap | link unlink anchor | blockquote nonbreaking hr | code'
+    row: 'newdocument print | cut copy paste | undo redo | searchreplace visualchars | table image polaroid bildgruppe media emoticons toc | insertdatetime pagebreak charmap | link unlink anchor | blockquote nonbreaking hr | code'
   -
     row: 'formatselect | fontselect fontsizeselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | indent outdent | forecolor backcolor | bullist numlist | superscript subscript | removeformat | fullscreen'
 branding: false

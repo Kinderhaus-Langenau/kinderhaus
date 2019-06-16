@@ -67,6 +67,7 @@
   display: block;
   padding: $spacing-medium;
   width: 100%;
+  transform: rotate(var(--polaroid-rotation));
 
   @include media($phablet-sm) {
     max-width: 50%;
