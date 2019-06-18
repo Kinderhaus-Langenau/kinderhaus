@@ -77,8 +77,11 @@
     max-width: 30%;
   }
 
-  .imagegroup & {
+  .imagegroup > & {
     display: inline-block;
+    margin-right: $spacing-medium;
+    margin-bottom: $spacing-medium;
+    margin-left: 0;
   }
 }
 
