@@ -1,0 +1,56 @@
+.login {
+  padding: 80px 30px;
+
+  @include media($phablet-lg) {
+    padding: 80px 100px;
+  }
+}
+
+.login-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  @include media($phablet-lg) {
+    flex-direction: row;
+  }
+
+  & > img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+
+    @include media($phablet-lg) {
+      margin-top: 0;
+    }
+  }
+}
+
+.logo_text {
+  margin-left: 20px;
+}
+
+.login-form .form-field {
+  & + .form-field {
+    margin-top: 30px;
+  }
+}
+
+.login-form .form-label {
+  margin-bottom: 5px;
+}
+
+.login-form .form-actions {
+  margin-top: 30px;
+}
+
+.login-btn {
+  height: 40px;
+  padding: 0 25px;
+  margin-bottom: 30px;
+}
+
+.login-options {
+  display: flex;
+  justify-content: space-between;
+}

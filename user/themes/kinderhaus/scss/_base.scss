@@ -76,3 +76,12 @@ address {
     color: #000 !important;
   }
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    max-width: 450px;
+    height: 40px;
+    background-color: $color-white;
+    border: 1px solid $color-black;
+    padding: 0 5px;
+}
