@@ -84,12 +84,6 @@
   color: $color-page-navigation-dropdown-icon;
 }
 
-.active {
-  .page-navigation__main-list > &::before {
-    background: url("../images/oese.png") no-repeat bottom/21px;
-  }
-}
-
 .page-navigation__link {
   font-family: $font-overlock;
   color: $color-white;
