@@ -15,6 +15,27 @@
   {% endfor %}
 {% endmacro %}
 
+{% macro loop_intern(page) %}
+  {% for p in page.find('/intern').children.visible if p.header.hideInMenu != true %}
+    {% set active = (p.active or p.activeChild) ? 'active' : '' %}
+    <li class="{{ active }}">
+      <a href="{{ p.url }}" class="page-navigation__link">{{ p.menu }} </a>
+
+      {% if p.children.count > 0 %}
+        <i class="page-navigation__dropdown-icon fa fa-caret-down"></i>
+        <ul class="page-navigation__list page-navigation__sub-list {{ active }}">
+          {{ _self.loop(p) }}
+        </ul>
+      {% endif %}
+
+    </li>
+  {% endfor %}
+{% endmacro %}
+
 <ul class="page-navigation__list page-navigation__main-list">
-  {{ _self.loop(pages) }}
+  {% if page.url|starts_with('/intern') %}
+    {{ _self.loop_intern(pages) }}
+  {% else %}
+    {{ _self.loop(pages) }}
+  {% endif %}
 </ul>
