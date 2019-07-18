@@ -1,0 +1,14 @@
+enabled: true
+dropdown:
+  enabled: true
+default_sidebar: 'termin, öffnungszeiten, kontakt'
+main_menu:
+  Startseite: /
+  Jobs: /jobs
+  Sponsoren: /sponsoren
+internal_menu:
+  Test: /test
+main_site_menu:
+  Startseite: /
+internal_site_menu:
+  Test: /test

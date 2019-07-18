@@ -1,0 +1,22 @@
+name: Kinderhaus
+form:
+  fields:
+    columns:
+      type: columns
+      fields:
+        col1:
+          type: column
+          fields:
+            main_site_menu:
+              label: Hauptmenü
+              type: array
+              placeholder_key: 'Name'
+              placeholder_value: 'URL'
+        col2:
+          type: column
+          fields:
+            internal_site_menu:
+              label: Internes Menü
+              type: array
+              placeholder_key: 'Name'
+              placeholder_value: 'URL'

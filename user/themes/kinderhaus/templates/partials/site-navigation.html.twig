@@ -1,13 +1,15 @@
 <nav class="navigation site-navigation">
   <ul class="site-navigation__list">
-    <li class="site-navigation__list-element">
-      <a href="/">Startseite</a>
-    </li>
-    <li class="site-navigation__list-element">
-      <a href="/jobs">Jobs</a>
-    </li>
-    <li class="site-navigation__list-element">
-      <a href="/sponsoren">Sponsoren</a>
-    </li>
+    {% set menu = theme.main_site_menu %}
+
+    {% if page.url|starts_with('/intern') %}
+      {% set menu = theme.internal_site_menu %}
+    {% endif %}
+
+    {% for name, url in menu %}
+      <li class="site-navigation__list-element">
+        <a href="{{ url }}">{{ name }}</a>
+      </li>
+    {% endfor %}
   </ul>
 </nav>
