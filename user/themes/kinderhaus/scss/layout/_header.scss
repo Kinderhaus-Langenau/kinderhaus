@@ -75,6 +75,8 @@
   background-color: red;
   width: 100%;
   padding-top: 37vw;
+  height: calc(100vh - 65px);
+  overflow-y: auto;
 
   @include media($phablet-sm) {
     padding-top: 175px;
