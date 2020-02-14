@@ -24,50 +24,6 @@ $(document).ready(function() {
     }
   });
 
-  // Text nach 2 Absätzen zusammenklappen
-  $('.content.content--fold h1').each(function() {
-    var contentElements = $(this).nextUntil('h1');
-
-    var cuttingPoint = function() {
-      var cuttingPoint = 0;
-      var ignored = ['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'B', 'I'];
-
-      contentElements.each(function(index, element) {
-        if(contentElements.length < 2) {
-          cuttingPoint = 1;
-          return false;
-        }
-
-        if(ignored.indexOf(contentElements[index + 1].tagName) > -1) {
-          return true;
-        }
-
-        if(index >= 2) {
-          cuttingPoint = index;
-          return false;
-        }
-      });
-
-      return cuttingPoint;
-    }.bind(contentElements)();
-
-    contentElements
-      .slice(cuttingPoint)
-      .wrapAll('<div class="hideable-text"></div>');
-  });
-
-  $('.hideable-text')
-    .before('<div class="read-more"><span class="read-more__arrow"></span> Mehr lesen</div>');
-
-  $('.read-more').click(function() {
-    $(this)
-      .next('.hideable-text')
-      .contents()
-      .unwrap();
-
-    $(this).hide();
-  });
-
   // Functions
   function closeSubMenu($target) {
     typecheckJqueryObject($target);
